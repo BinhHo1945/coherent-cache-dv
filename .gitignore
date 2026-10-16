@@ -1,0 +1,35 @@
+# License (never commit)
+*.dat
+license/
+env.sh
+
+# Questa / ModelSim build artifacts
+work/
+transcript
+*.wlf
+*.ucdb
+*.vcd
+modelsim.ini
+vsim.wlf
+
+# Quartus build artifacts (keep .qpf, .qsf, .sdc and copied reports only)
+db/
+incremental_db/
+output_files/
+*.rpt
+*.smsg
+
+# SymbiYosys output
+*_bmc/
+*_prove/
+*_cover/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
