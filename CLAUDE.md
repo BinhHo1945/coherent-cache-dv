@@ -38,7 +38,7 @@ reports/    logs, coverage reports, synthesis summaries (committed as evidence)
 - OS: Windows with Git Bash. Paths in commands use /d/dv/... style. There is no `make`; use `sim/run.sh` or Python scripts.
 - Simulator: Questa Altera Starter FPGA Edition 2025.2 (UVM-1.1d bundled). Synthesis: Quartus Prime Lite 25.1. Also: Verilator, SymbiYosys (OSS CAD Suite), Python, gcc 7.4.0 bundled with Questa.
 - Run simulation: `source env.sh` then `./sim/run.sh <project_dir> <top> [+define+X]`.
-- Lint: `verilator --lint-only -Wall -sv <files> --top-module <module>`.
+- Lint: `verilator_bin.exe --lint-only -Wall -sv <files> --top-module <module>` (needs VERILATOR_ROOT from env.sh).
 - Formal (from P3): `sby -f <file>.sby`, with assertions wrapped in `ifdef FORMAL`.
 - `env.sh` holds local paths and license settings. Never commit it. Never commit license files.
 
