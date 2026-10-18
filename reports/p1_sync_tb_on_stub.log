@@ -1,0 +1,1309 @@
+Reading pref.tcl
+
+# 2025.2
+
+# ** Note: (vsim-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -c -work D:/Projects/HW/coherent-cache-dv/work/p1 -coverage tb_sync_fifo -do "run -all; coverage save -onexit /d/Projects/HW/coherent-cache-dv/work/p1/cov.ucdb; quit -f" 
+# Start time: 19:41:03 on Oct 17,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_sync_fifo(fast)
+# run -all
+# INFO tb_sync_fifo DEPTH=16 DATA_WIDTH=32
+# [ERR][S1] t=40ns exp=1 got=0 (C-05) empty after reset
+# [ERR][S1] t=50ns exp=1 got=0 (C-05) empty 1 cycle after reset
+# INFO S1 checks=8 errors=2
+# TEST S1 FAIL
+# [ERR][S2] t=100ns exp=1 got=0 (S-02) empty before write is sampled
+# [ERR][S2] t=110ns exp=1 got=0 (S-04) count 0->1
+# [ERR][S2] t=110ns exp=21 got=0 (C-01) head after write
+# [ERR][S2] t=120ns exp=21 got=0 (C-01) head before read is sampled
+# [ERR][S2] t=130ns exp=1 got=0 (S-02) empty rises after read
+# INFO S2 checks=14 errors=5
+# TEST S2 FAIL
+# [ERR][S3] t=330ns exp=f got=0 (S-04) count=DEPTH-1
+# [ERR][S3] t=340ns exp=1 got=0 (S-02) full after DEPTH writes
+# [ERR][S3] t=340ns exp=10 got=0 (S-04) count after DEPTH writes
+# INFO S3 checks=23 errors=3
+# TEST S3 FAIL
+# [ERR][S4] t=550ns exp=1 got=0 (S-02) full before drain
+# [ERR][S4] t=560ns exp=41 got=0 (C-07) FIFO order element 0
+# [ERR][S4] t=570ns exp=42 got=0 (C-07) FIFO order element 1
+# [ERR][S4] t=580ns exp=43 got=0 (C-07) FIFO order element 2
+# [ERR][S4] t=590ns exp=44 got=0 (C-07) FIFO order element 3
+# [ERR][S4] t=600ns exp=45 got=0 (C-07) FIFO order element 4
+# [ERR][S4] t=610ns exp=46 got=0 (C-07) FIFO order element 5
+# [ERR][S4] t=620ns exp=47 got=0 (C-07) FIFO order element 6
+# [ERR][S4] t=630ns exp=48 got=0 (C-07) FIFO order element 7
+# [ERR][S4] t=640ns exp=49 got=0 (C-07) FIFO order element 8
+# [ERR][S4] t=650ns exp=4a got=0 (C-07) FIFO order element 9
+# [ERR][S4] t=660ns exp=4b got=0 (C-07) FIFO order element 10
+# [ERR][S4] t=670ns exp=4c got=0 (C-07) FIFO order element 11
+# [ERR][S4] t=680ns exp=4d got=0 (C-07) FIFO order element 12
+# [ERR][S4] t=690ns exp=4e got=0 (C-07) FIFO order element 13
+# [ERR][S4] t=700ns exp=4f got=0 (C-07) FIFO order element 14
+# [ERR][S4] t=710ns exp=50 got=0 (C-07) FIFO order element 15
+# [ERR][S4] t=720ns exp=1 got=0 (C-01) empty rises after last pop
+# INFO S4 checks=70 errors=18
+# TEST S4 FAIL
+# [ERR][S5] t=930ns exp=1 got=0 (S-02) full before rejected write
+# [ERR][S5] t=950ns exp=1 got=0 (C-04) overflow pulse 1 cycle after attempt
+# [ERR][S5] t=950ns exp=10 got=0 (C-03) count unchanged after rejected write
+# [ERR][S5] t=950ns exp=1 got=0 (C-03) full unchanged after rejected write
+# [ERR][S5] t=950ns exp=51 got=0 (C-03) head unchanged after rejected write
+# [ERR][S5] t=980ns exp=1 got=0 (C-04) overflow for 1st of 2 consecutive attempts
+# [ERR][S5] t=990ns exp=1 got=0 (C-04) overflow for 2nd of 2 consecutive attempts
+# [ERR][S5] t=1000ns exp=10 got=0 (C-03) count unchanged after 3 rejected writes
+# [ERR][S5] t=1010ns exp=51 got=0 (C-03) old data intact element 0
+# [ERR][S5] t=1020ns exp=52 got=0 (C-03) old data intact element 1
+# [ERR][S5] t=1030ns exp=53 got=0 (C-03) old data intact element 2
+# [ERR][S5] t=1040ns exp=54 got=0 (C-03) old data intact element 3
+# [ERR][S5] t=1050ns exp=55 got=0 (C-03) old data intact element 4
+# [ERR][S5] t=1060ns exp=56 got=0 (C-03) old data intact element 5
+# [ERR][S5] t=1070ns exp=57 got=0 (C-03) old data intact element 6
+# [ERR][S5] t=1080ns exp=58 got=0 (C-03) old data intact element 7
+# [ERR][S5] t=1090ns exp=59 got=0 (C-03) old data intact element 8
+# [ERR][S5] t=1100ns exp=5a got=0 (C-03) old data intact element 9
+# [ERR][S5] t=1110ns exp=5b got=0 (C-03) old data intact element 10
+# [ERR][S5] t=1120ns exp=5c got=0 (C-03) old data intact element 11
+# [ERR][S5] t=1130ns exp=5d got=0 (C-03) old data intact element 12
+# [ERR][S5] t=1140ns exp=5e got=0 (C-03) old data intact element 13
+# [ERR][S5] t=1150ns exp=5f got=0 (C-03) old data intact element 14
+# [ERR][S5] t=1160ns exp=60 got=0 (C-03) old data intact element 15
+# [ERR][S5] t=1170ns exp=1 got=0 (C-03) empty after reading DEPTH (rejected data not stored)
+# INFO S5 checks=85 errors=25
+# TEST S5 FAIL
+# [ERR][S6] t=1220ns exp=1 got=0 (S-02) empty before rejected read
+# [ERR][S6] t=1230ns exp=1 got=0 (C-04) underflow pulse 1 cycle after attempt
+# [ERR][S6] t=1230ns exp=1 got=0 (C-03) empty unchanged after rejected read
+# [ERR][S6] t=1260ns exp=1 got=0 (C-04) underflow for 1st of 2 consecutive attempts
+# [ERR][S6] t=1270ns exp=1 got=0 (C-04) underflow for 2nd of 2 consecutive attempts
+# [ERR][S6] t=1280ns exp=1 got=0 (C-03) empty unchanged after 3 rejected reads
+# [ERR][S6] t=1300ns exp=1 got=0 (C-03) count=1 after write following rejected read
+# [ERR][S6] t=1300ns exp=61 got=0 (C-03) head after write following rejected read
+# [ERR][S6] t=1320ns exp=1 got=0 (C-03) empty after round trip
+# INFO S6 checks=27 errors=9
+# TEST S6 FAIL
+# [ERR][S7] t=1450ns exp=8 got=0 (S-03) count unchanged, simul op 0
+# [ERR][S7] t=1450ns exp=71 got=0 (C-07) head order, simul op 0
+# [ERR][S7] t=1460ns exp=8 got=0 (S-03) count unchanged, simul op 1
+# [ERR][S7] t=1460ns exp=72 got=0 (C-07) head order, simul op 1
+# [ERR][S7] t=1470ns exp=8 got=0 (S-03) count unchanged, simul op 2
+# [ERR][S7] t=1470ns exp=73 got=0 (C-07) head order, simul op 2
+# [ERR][S7] t=1480ns exp=8 got=0 (S-03) count unchanged, simul op 3
+# [ERR][S7] t=1480ns exp=74 got=0 (C-07) head order, simul op 3
+# [ERR][S7] t=1490ns exp=8 got=0 (S-03) count unchanged, simul op 4
+# [ERR][S7] t=1490ns exp=75 got=0 (C-07) head order, simul op 4
+# [ERR][S7] t=1500ns exp=8 got=0 (S-03) count unchanged, simul op 5
+# [ERR][S7] t=1500ns exp=76 got=0 (C-07) head order, simul op 5
+# [ERR][S7] t=1510ns exp=8 got=0 (S-03) count unchanged, simul op 6
+# [ERR][S7] t=1510ns exp=77 got=0 (C-07) head order, simul op 6
+# [ERR][S7] t=1520ns exp=8 got=0 (S-03) count unchanged, simul op 7
+# [ERR][S7] t=1520ns exp=78 got=0 (C-07) head order, simul op 7
+# [ERR][S7] t=1530ns exp=8 got=0 (S-03) count unchanged, simul op 8
+# [ERR][S7] t=1530ns exp=79 got=0 (C-07) head order, simul op 8
+# [ERR][S7] t=1540ns exp=8 got=0 (S-03) count unchanged, simul op 9
+# [ERR][S7] t=1540ns exp=7a got=0 (C-07) head order, simul op 9
+# [ERR][S7] t=1550ns exp=8 got=0 (S-03) count unchanged, simul op 10
+# [ERR][S7] t=1550ns exp=7b got=0 (C-07) head order, simul op 10
+# [ERR][S7] t=1560ns exp=8 got=0 (S-03) count unchanged, simul op 11
+# [ERR][S7] t=1560ns exp=7c got=0 (C-07) head order, simul op 11
+# [ERR][S7] t=1570ns exp=8 got=0 (S-03) count unchanged, simul op 12
+# [ERR][S7] t=1570ns exp=7d got=0 (C-07) head order, simul op 12
+# [ERR][S7] t=1580ns exp=8 got=0 (S-03) count unchanged, simul op 13
+# [ERR][S7] t=1580ns exp=7e got=0 (C-07) head order, simul op 13
+# [ERR][S7] t=1590ns exp=8 got=0 (S-03) count unchanged, simul op 14
+# [ERR][S7] t=1590ns exp=7f got=0 (C-07) head order, simul op 14
+# [ERR][S7] t=1600ns exp=8 got=0 (S-03) count unchanged, simul op 15
+# [ERR][S7] t=1600ns exp=80 got=0 (C-07) head order, simul op 15
+# [ERR][S7] t=1610ns exp=8 got=0 (S-03) count unchanged, simul op 16
+# [ERR][S7] t=1610ns exp=81 got=0 (C-07) head order, simul op 16
+# [ERR][S7] t=1620ns exp=8 got=0 (S-03) count unchanged, simul op 17
+# [ERR][S7] t=1620ns exp=82 got=0 (C-07) head order, simul op 17
+# [ERR][S7] t=1630ns exp=8 got=0 (S-03) count unchanged, simul op 18
+# [ERR][S7] t=1630ns exp=83 got=0 (C-07) head order, simul op 18
+# [ERR][S7] t=1640ns exp=8 got=0 (S-03) count unchanged, simul op 19
+# [ERR][S7] t=1640ns exp=84 got=0 (C-07) head order, simul op 19
+# [ERR][S7] t=1650ns exp=8 got=0 (S-03) count unchanged, simul op 20
+# [ERR][S7] t=1650ns exp=85 got=0 (C-07) head order, simul op 20
+# [ERR][S7] t=1660ns exp=8 got=0 (S-03) count unchanged, simul op 21
+# [ERR][S7] t=1660ns exp=86 got=0 (C-07) head order, simul op 21
+# [ERR][S7] t=1670ns exp=8 got=0 (S-03) count unchanged, simul op 22
+# [ERR][S7] t=1670ns exp=87 got=0 (C-07) head order, simul op 22
+# [ERR][S7] t=1680ns exp=8 got=0 (S-03) count unchanged, simul op 23
+# [ERR][S7] t=1680ns exp=88 got=0 (C-07) head order, simul op 23
+# [ERR][S7] t=1690ns exp=8 got=0 (S-03) count unchanged, simul op 24
+# [ERR][S7] t=1690ns exp=89 got=0 (C-07) head order, simul op 24
+# [ERR][S7] t=1700ns exp=8 got=0 (S-03) count unchanged, simul op 25
+# [ERR][S7] t=1700ns exp=8a got=0 (C-07) head order, simul op 25
+# [ERR][S7] t=1710ns exp=8 got=0 (S-03) count unchanged, simul op 26
+# [ERR][S7] t=1710ns exp=8b got=0 (C-07) head order, simul op 26
+# [ERR][S7] t=1720ns exp=8 got=0 (S-03) count unchanged, simul op 27
+# [ERR][S7] t=1720ns exp=8c got=0 (C-07) head order, simul op 27
+# [ERR][S7] t=1730ns exp=8 got=0 (S-03) count unchanged, simul op 28
+# [ERR][S7] t=1730ns exp=8d got=0 (C-07) head order, simul op 28
+# [ERR][S7] t=1740ns exp=8 got=0 (S-03) count unchanged, simul op 29
+# [ERR][S7] t=1740ns exp=8e got=0 (C-07) head order, simul op 29
+# [ERR][S7] t=1750ns exp=8 got=0 (S-03) count unchanged, simul op 30
+# [ERR][S7] t=1750ns exp=8f got=0 (C-07) head order, simul op 30
+# [ERR][S7] t=1760ns exp=8 got=0 (S-03) count unchanged, simul op 31
+# [ERR][S7] t=1760ns exp=90 got=0 (C-07) head order, simul op 31
+# [ERR][S7] t=1770ns exp=8 got=0 (S-03) count unchanged after simultaneous ops
+# [ERR][S7] t=1780ns exp=91 got=0 (C-07) drain order element 0
+# [ERR][S7] t=1790ns exp=92 got=0 (C-07) drain order element 1
+# [ERR][S7] t=1800ns exp=93 got=0 (C-07) drain order element 2
+# [ERR][S7] t=1810ns exp=94 got=0 (C-07) drain order element 3
+# [ERR][S7] t=1820ns exp=95 got=0 (C-07) drain order element 4
+# [ERR][S7] t=1830ns exp=96 got=0 (C-07) drain order element 5
+# [ERR][S7] t=1840ns exp=97 got=0 (C-07) drain order element 6
+# [ERR][S7] t=1850ns exp=98 got=0 (C-07) drain order element 7
+# [ERR][S7] t=1860ns exp=1 got=0 (S-02) empty after drain
+# INFO S7 checks=190 errors=74
+# TEST S7 FAIL
+# [ERR][S8] t=1910ns exp=1 got=0 (S-02) empty before simultaneous op
+# [ERR][S8] t=1920ns exp=1 got=0 (S-03) write accepted: count=1
+# [ERR][S8] t=1920ns exp=1 got=0 (C-04) read rejected: underflow=1
+# [ERR][S8] t=1920ns exp=81 got=0 (S-03) written element is head
+# [ERR][S8] t=1930ns exp=1 got=0 (S-03) count still 1
+# [ERR][S8] t=1950ns exp=1 got=0 (S-02) empty after reading the element
+# INFO S8 checks=14 errors=6
+# TEST S8 FAIL
+# [ERR][S9] t=2160ns exp=1 got=0 (S-02) full before simultaneous op
+# [ERR][S9] t=2180ns exp=f got=0 (S-03) count=DEPTH-1
+# [ERR][S9] t=2180ns exp=1 got=0 (C-04) write rejected: overflow=1
+# [ERR][S9] t=2180ns exp=92 got=0 (S-03) head advanced by accepted read
+# [ERR][S9] t=2200ns exp=92 got=0 (C-03) drain order element 0
+# [ERR][S9] t=2210ns exp=93 got=0 (C-03) drain order element 1
+# [ERR][S9] t=2220ns exp=94 got=0 (C-03) drain order element 2
+# [ERR][S9] t=2230ns exp=95 got=0 (C-03) drain order element 3
+# [ERR][S9] t=2240ns exp=96 got=0 (C-03) drain order element 4
+# [ERR][S9] t=2250ns exp=97 got=0 (C-03) drain order element 5
+# [ERR][S9] t=2260ns exp=98 got=0 (C-03) drain order element 6
+# [ERR][S9] t=2270ns exp=99 got=0 (C-03) drain order element 7
+# [ERR][S9] t=2280ns exp=9a got=0 (C-03) drain order element 8
+# [ERR][S9] t=2290ns exp=9b got=0 (C-03) drain order element 9
+# [ERR][S9] t=2300ns exp=9c got=0 (C-03) drain order element 10
+# [ERR][S9] t=2310ns exp=9d got=0 (C-03) drain order element 11
+# [ERR][S9] t=2320ns exp=9e got=0 (C-03) drain order element 12
+# [ERR][S9] t=2330ns exp=9f got=0 (C-03) drain order element 13
+# [ERR][S9] t=2340ns exp=a0 got=0 (C-03) drain order element 14
+# [ERR][S9] t=2350ns exp=1 got=0 (C-03) empty after DEPTH-1 reads (rejected data not stored)
+# INFO S9 checks=59 errors=20
+# TEST S9 FAIL
+# [ERR][S10] t=2400ns exp=1 got=0 (S-02) lap 0 empty during fill
+# [ERR][S10] t=2560ns exp=1 got=0 (S-02) lap 0 full at fill end
+# [ERR][S10] t=2560ns exp=10 got=0 (S-01) lap 0 count at fill end
+# [ERR][S10] t=2570ns exp=1 got=0 (S-02) lap 0 full during drain
+# [ERR][S10] t=2570ns exp=11 got=0 (C-07) lap 0 drain element 0
+# [ERR][S10] t=2580ns exp=12 got=0 (C-07) lap 0 drain element 1
+# [ERR][S10] t=2590ns exp=13 got=0 (C-07) lap 0 drain element 2
+# [ERR][S10] t=2600ns exp=14 got=0 (C-07) lap 0 drain element 3
+# [ERR][S10] t=2610ns exp=15 got=0 (C-07) lap 0 drain element 4
+# [ERR][S10] t=2620ns exp=16 got=0 (C-07) lap 0 drain element 5
+# [ERR][S10] t=2630ns exp=17 got=0 (C-07) lap 0 drain element 6
+# [ERR][S10] t=2640ns exp=18 got=0 (C-07) lap 0 drain element 7
+# [ERR][S10] t=2650ns exp=19 got=0 (C-07) lap 0 drain element 8
+# [ERR][S10] t=2660ns exp=1a got=0 (C-07) lap 0 drain element 9
+# [ERR][S10] t=2670ns exp=1b got=0 (C-07) lap 0 drain element 10
+# [ERR][S10] t=2680ns exp=1c got=0 (C-07) lap 0 drain element 11
+# [ERR][S10] t=2690ns exp=1d got=0 (C-07) lap 0 drain element 12
+# [ERR][S10] t=2700ns exp=1e got=0 (C-07) lap 0 drain element 13
+# [ERR][S10] t=2710ns exp=1f got=0 (C-07) lap 0 drain element 14
+# [ERR][S10] t=2720ns exp=20 got=0 (C-07) lap 0 drain element 15
+# [ERR][S10] t=2730ns exp=1 got=0 (S-02) lap 0 empty at drain end
+# [ERR][S10] t=2740ns exp=1 got=0 (S-02) lap 1 empty during fill
+# [ERR][S10] t=2900ns exp=1 got=0 (S-02) lap 1 full at fill end
+# [ERR][S10] t=2900ns exp=10 got=0 (S-01) lap 1 count at fill end
+# [ERR][S10] t=2910ns exp=1 got=0 (S-02) lap 1 full during drain
+# [ERR][S10] t=2910ns exp=21 got=0 (C-07) lap 1 drain element 0
+# [ERR][S10] t=2920ns exp=22 got=0 (C-07) lap 1 drain element 1
+# [ERR][S10] t=2930ns exp=23 got=0 (C-07) lap 1 drain element 2
+# [ERR][S10] t=2940ns exp=24 got=0 (C-07) lap 1 drain element 3
+# [ERR][S10] t=2950ns exp=25 got=0 (C-07) lap 1 drain element 4
+# [ERR][S10] t=2960ns exp=26 got=0 (C-07) lap 1 drain element 5
+# [ERR][S10] t=2970ns exp=27 got=0 (C-07) lap 1 drain element 6
+# [ERR][S10] t=2980ns exp=28 got=0 (C-07) lap 1 drain element 7
+# [ERR][S10] t=2990ns exp=29 got=0 (C-07) lap 1 drain element 8
+# [ERR][S10] t=3000ns exp=2a got=0 (C-07) lap 1 drain element 9
+# [ERR][S10] t=3010ns exp=2b got=0 (C-07) lap 1 drain element 10
+# [ERR][S10] t=3020ns exp=2c got=0 (C-07) lap 1 drain element 11
+# [ERR][S10] t=3030ns exp=2d got=0 (C-07) lap 1 drain element 12
+# [ERR][S10] t=3040ns exp=2e got=0 (C-07) lap 1 drain element 13
+# [ERR][S10] t=3050ns exp=2f got=0 (C-07) lap 1 drain element 14
+# [ERR][S10] t=3060ns exp=30 got=0 (C-07) lap 1 drain element 15
+# [ERR][S10] t=3070ns exp=1 got=0 (S-02) lap 1 empty at drain end
+# [ERR][S10] t=3080ns exp=1 got=0 (S-02) lap 2 empty during fill
+# [ERR][S10] t=3240ns exp=1 got=0 (S-02) lap 2 full at fill end
+# [ERR][S10] t=3240ns exp=10 got=0 (S-01) lap 2 count at fill end
+# [ERR][S10] t=3250ns exp=1 got=0 (S-02) lap 2 full during drain
+# [ERR][S10] t=3250ns exp=31 got=0 (C-07) lap 2 drain element 0
+# [ERR][S10] t=3260ns exp=32 got=0 (C-07) lap 2 drain element 1
+# [ERR][S10] t=3270ns exp=33 got=0 (C-07) lap 2 drain element 2
+# [ERR][S10] t=3280ns exp=34 got=0 (C-07) lap 2 drain element 3
+# [ERR][S10] t=3290ns exp=35 got=0 (C-07) lap 2 drain element 4
+# [ERR][S10] t=3300ns exp=36 got=0 (C-07) lap 2 drain element 5
+# [ERR][S10] t=3310ns exp=37 got=0 (C-07) lap 2 drain element 6
+# [ERR][S10] t=3320ns exp=38 got=0 (C-07) lap 2 drain element 7
+# [ERR][S10] t=3330ns exp=39 got=0 (C-07) lap 2 drain element 8
+# [ERR][S10] t=3340ns exp=3a got=0 (C-07) lap 2 drain element 9
+# [ERR][S10] t=3350ns exp=3b got=0 (C-07) lap 2 drain element 10
+# [ERR][S10] t=3360ns exp=3c got=0 (C-07) lap 2 drain element 11
+# [ERR][S10] t=3370ns exp=3d got=0 (C-07) lap 2 drain element 12
+# [ERR][S10] t=3380ns exp=3e got=0 (C-07) lap 2 drain element 13
+# [ERR][S10] t=3390ns exp=3f got=0 (C-07) lap 2 drain element 14
+# [ERR][S10] t=3400ns exp=40 got=0 (C-07) lap 2 drain element 15
+# [ERR][S10] t=3410ns exp=1 got=0 (S-02) lap 2 empty at drain end
+# [ERR][S10] t=3470ns exp=1 got=0 (S-01) advance 1: count after 1 writes
+# [ERR][S10] t=3480ns exp=11 got=0 (C-07) advance 1: element 0
+# [ERR][S10] t=3490ns exp=1 got=0 (S-02) advance 1: empty after chunk
+# [ERR][S10] t=3500ns exp=1 got=0 (S-02) offset 1 (MSB=0) empty during fill
+# [ERR][S10] t=3660ns exp=1 got=0 (S-02) offset 1 (MSB=0) full at fill end
+# [ERR][S10] t=3660ns exp=10 got=0 (S-01) offset 1 (MSB=0) count at fill end
+# [ERR][S10] t=3670ns exp=1 got=0 (S-02) offset 1 (MSB=0) full during drain
+# [ERR][S10] t=3670ns exp=12 got=0 (C-07) offset 1 (MSB=0) drain element 0
+# [ERR][S10] t=3680ns exp=13 got=0 (C-07) offset 1 (MSB=0) drain element 1
+# [ERR][S10] t=3690ns exp=14 got=0 (C-07) offset 1 (MSB=0) drain element 2
+# [ERR][S10] t=3700ns exp=15 got=0 (C-07) offset 1 (MSB=0) drain element 3
+# [ERR][S10] t=3710ns exp=16 got=0 (C-07) offset 1 (MSB=0) drain element 4
+# [ERR][S10] t=3720ns exp=17 got=0 (C-07) offset 1 (MSB=0) drain element 5
+# [ERR][S10] t=3730ns exp=18 got=0 (C-07) offset 1 (MSB=0) drain element 6
+# [ERR][S10] t=3740ns exp=19 got=0 (C-07) offset 1 (MSB=0) drain element 7
+# [ERR][S10] t=3750ns exp=1a got=0 (C-07) offset 1 (MSB=0) drain element 8
+# [ERR][S10] t=3760ns exp=1b got=0 (C-07) offset 1 (MSB=0) drain element 9
+# [ERR][S10] t=3770ns exp=1c got=0 (C-07) offset 1 (MSB=0) drain element 10
+# [ERR][S10] t=3780ns exp=1d got=0 (C-07) offset 1 (MSB=0) drain element 11
+# [ERR][S10] t=3790ns exp=1e got=0 (C-07) offset 1 (MSB=0) drain element 12
+# [ERR][S10] t=3800ns exp=1f got=0 (C-07) offset 1 (MSB=0) drain element 13
+# [ERR][S10] t=3810ns exp=20 got=0 (C-07) offset 1 (MSB=0) drain element 14
+# [ERR][S10] t=3820ns exp=21 got=0 (C-07) offset 1 (MSB=0) drain element 15
+# [ERR][S10] t=3830ns exp=1 got=0 (S-02) offset 1 (MSB=0) empty at drain end
+# [ERR][S10] t=3960ns exp=8 got=0 (S-01) advance 8: count after 8 writes
+# [ERR][S10] t=3970ns exp=11 got=0 (C-07) advance 8: element 0
+# [ERR][S10] t=3980ns exp=12 got=0 (C-07) advance 8: element 1
+# [ERR][S10] t=3990ns exp=13 got=0 (C-07) advance 8: element 2
+# [ERR][S10] t=4000ns exp=14 got=0 (C-07) advance 8: element 3
+# [ERR][S10] t=4010ns exp=15 got=0 (C-07) advance 8: element 4
+# [ERR][S10] t=4020ns exp=16 got=0 (C-07) advance 8: element 5
+# [ERR][S10] t=4030ns exp=17 got=0 (C-07) advance 8: element 6
+# [ERR][S10] t=4040ns exp=18 got=0 (C-07) advance 8: element 7
+# [ERR][S10] t=4050ns exp=1 got=0 (S-02) advance 8: empty after chunk
+# [ERR][S10] t=4060ns exp=1 got=0 (S-02) offset 8 (MSB=0) empty during fill
+# [ERR][S10] t=4220ns exp=1 got=0 (S-02) offset 8 (MSB=0) full at fill end
+# [ERR][S10] t=4220ns exp=10 got=0 (S-01) offset 8 (MSB=0) count at fill end
+# [ERR][S10] t=4230ns exp=1 got=0 (S-02) offset 8 (MSB=0) full during drain
+# [ERR][S10] t=4230ns exp=19 got=0 (C-07) offset 8 (MSB=0) drain element 0
+# [ERR][S10] t=4240ns exp=1a got=0 (C-07) offset 8 (MSB=0) drain element 1
+# [ERR][S10] t=4250ns exp=1b got=0 (C-07) offset 8 (MSB=0) drain element 2
+# [ERR][S10] t=4260ns exp=1c got=0 (C-07) offset 8 (MSB=0) drain element 3
+# [ERR][S10] t=4270ns exp=1d got=0 (C-07) offset 8 (MSB=0) drain element 4
+# [ERR][S10] t=4280ns exp=1e got=0 (C-07) offset 8 (MSB=0) drain element 5
+# [ERR][S10] t=4290ns exp=1f got=0 (C-07) offset 8 (MSB=0) drain element 6
+# [ERR][S10] t=4300ns exp=20 got=0 (C-07) offset 8 (MSB=0) drain element 7
+# [ERR][S10] t=4310ns exp=21 got=0 (C-07) offset 8 (MSB=0) drain element 8
+# [ERR][S10] t=4320ns exp=22 got=0 (C-07) offset 8 (MSB=0) drain element 9
+# [ERR][S10] t=4330ns exp=23 got=0 (C-07) offset 8 (MSB=0) drain element 10
+# [ERR][S10] t=4340ns exp=24 got=0 (C-07) offset 8 (MSB=0) drain element 11
+# [ERR][S10] t=4350ns exp=25 got=0 (C-07) offset 8 (MSB=0) drain element 12
+# [ERR][S10] t=4360ns exp=26 got=0 (C-07) offset 8 (MSB=0) drain element 13
+# [ERR][S10] t=4370ns exp=27 got=0 (C-07) offset 8 (MSB=0) drain element 14
+# [ERR][S10] t=4380ns exp=28 got=0 (C-07) offset 8 (MSB=0) drain element 15
+# [ERR][S10] t=4390ns exp=1 got=0 (S-02) offset 8 (MSB=0) empty at drain end
+# [ERR][S10] t=4590ns exp=f got=0 (S-01) advance 15: count after 15 writes
+# [ERR][S10] t=4600ns exp=11 got=0 (C-07) advance 15: element 0
+# [ERR][S10] t=4610ns exp=12 got=0 (C-07) advance 15: element 1
+# [ERR][S10] t=4620ns exp=13 got=0 (C-07) advance 15: element 2
+# [ERR][S10] t=4630ns exp=14 got=0 (C-07) advance 15: element 3
+# [ERR][S10] t=4640ns exp=15 got=0 (C-07) advance 15: element 4
+# [ERR][S10] t=4650ns exp=16 got=0 (C-07) advance 15: element 5
+# [ERR][S10] t=4660ns exp=17 got=0 (C-07) advance 15: element 6
+# [ERR][S10] t=4670ns exp=18 got=0 (C-07) advance 15: element 7
+# [ERR][S10] t=4680ns exp=19 got=0 (C-07) advance 15: element 8
+# [ERR][S10] t=4690ns exp=1a got=0 (C-07) advance 15: element 9
+# [ERR][S10] t=4700ns exp=1b got=0 (C-07) advance 15: element 10
+# [ERR][S10] t=4710ns exp=1c got=0 (C-07) advance 15: element 11
+# [ERR][S10] t=4720ns exp=1d got=0 (C-07) advance 15: element 12
+# [ERR][S10] t=4730ns exp=1e got=0 (C-07) advance 15: element 13
+# [ERR][S10] t=4740ns exp=1f got=0 (C-07) advance 15: element 14
+# [ERR][S10] t=4750ns exp=1 got=0 (S-02) advance 15: empty after chunk
+# [ERR][S10] t=4760ns exp=1 got=0 (S-02) offset 15 (MSB=0) empty during fill
+# [ERR][S10] t=4920ns exp=1 got=0 (S-02) offset 15 (MSB=0) full at fill end
+# [ERR][S10] t=4920ns exp=10 got=0 (S-01) offset 15 (MSB=0) count at fill end
+# [ERR][S10] t=4930ns exp=1 got=0 (S-02) offset 15 (MSB=0) full during drain
+# [ERR][S10] t=4930ns exp=20 got=0 (C-07) offset 15 (MSB=0) drain element 0
+# [ERR][S10] t=4940ns exp=21 got=0 (C-07) offset 15 (MSB=0) drain element 1
+# [ERR][S10] t=4950ns exp=22 got=0 (C-07) offset 15 (MSB=0) drain element 2
+# [ERR][S10] t=4960ns exp=23 got=0 (C-07) offset 15 (MSB=0) drain element 3
+# [ERR][S10] t=4970ns exp=24 got=0 (C-07) offset 15 (MSB=0) drain element 4
+# [ERR][S10] t=4980ns exp=25 got=0 (C-07) offset 15 (MSB=0) drain element 5
+# [ERR][S10] t=4990ns exp=26 got=0 (C-07) offset 15 (MSB=0) drain element 6
+# [ERR][S10] t=5000ns exp=27 got=0 (C-07) offset 15 (MSB=0) drain element 7
+# [ERR][S10] t=5010ns exp=28 got=0 (C-07) offset 15 (MSB=0) drain element 8
+# [ERR][S10] t=5020ns exp=29 got=0 (C-07) offset 15 (MSB=0) drain element 9
+# [ERR][S10] t=5030ns exp=2a got=0 (C-07) offset 15 (MSB=0) drain element 10
+# [ERR][S10] t=5040ns exp=2b got=0 (C-07) offset 15 (MSB=0) drain element 11
+# [ERR][S10] t=5050ns exp=2c got=0 (C-07) offset 15 (MSB=0) drain element 12
+# [ERR][S10] t=5060ns exp=2d got=0 (C-07) offset 15 (MSB=0) drain element 13
+# [ERR][S10] t=5070ns exp=2e got=0 (C-07) offset 15 (MSB=0) drain element 14
+# [ERR][S10] t=5080ns exp=2f got=0 (C-07) offset 15 (MSB=0) drain element 15
+# [ERR][S10] t=5090ns exp=1 got=0 (S-02) offset 15 (MSB=0) empty at drain end
+# [ERR][S10] t=5300ns exp=10 got=0 (S-01) advance 17: count after 16 writes
+# [ERR][S10] t=5310ns exp=11 got=0 (C-07) advance 17: element 0
+# [ERR][S10] t=5320ns exp=12 got=0 (C-07) advance 17: element 1
+# [ERR][S10] t=5330ns exp=13 got=0 (C-07) advance 17: element 2
+# [ERR][S10] t=5340ns exp=14 got=0 (C-07) advance 17: element 3
+# [ERR][S10] t=5350ns exp=15 got=0 (C-07) advance 17: element 4
+# [ERR][S10] t=5360ns exp=16 got=0 (C-07) advance 17: element 5
+# [ERR][S10] t=5370ns exp=17 got=0 (C-07) advance 17: element 6
+# [ERR][S10] t=5380ns exp=18 got=0 (C-07) advance 17: element 7
+# [ERR][S10] t=5390ns exp=19 got=0 (C-07) advance 17: element 8
+# [ERR][S10] t=5400ns exp=1a got=0 (C-07) advance 17: element 9
+# [ERR][S10] t=5410ns exp=1b got=0 (C-07) advance 17: element 10
+# [ERR][S10] t=5420ns exp=1c got=0 (C-07) advance 17: element 11
+# [ERR][S10] t=5430ns exp=1d got=0 (C-07) advance 17: element 12
+# [ERR][S10] t=5440ns exp=1e got=0 (C-07) advance 17: element 13
+# [ERR][S10] t=5450ns exp=1f got=0 (C-07) advance 17: element 14
+# [ERR][S10] t=5460ns exp=20 got=0 (C-07) advance 17: element 15
+# [ERR][S10] t=5470ns exp=1 got=0 (S-02) advance 17: empty after chunk
+# [ERR][S10] t=5490ns exp=1 got=0 (S-01) advance 17: count after 1 writes
+# [ERR][S10] t=5500ns exp=21 got=0 (C-07) advance 17: element 0
+# [ERR][S10] t=5510ns exp=1 got=0 (S-02) advance 17: empty after chunk
+# [ERR][S10] t=5520ns exp=1 got=0 (S-02) offset 17 (MSB=1) empty during fill
+# [ERR][S10] t=5680ns exp=1 got=0 (S-02) offset 17 (MSB=1) full at fill end
+# [ERR][S10] t=5680ns exp=10 got=0 (S-01) offset 17 (MSB=1) count at fill end
+# [ERR][S10] t=5690ns exp=1 got=0 (S-02) offset 17 (MSB=1) full during drain
+# [ERR][S10] t=5690ns exp=22 got=0 (C-07) offset 17 (MSB=1) drain element 0
+# [ERR][S10] t=5700ns exp=23 got=0 (C-07) offset 17 (MSB=1) drain element 1
+# [ERR][S10] t=5710ns exp=24 got=0 (C-07) offset 17 (MSB=1) drain element 2
+# [ERR][S10] t=5720ns exp=25 got=0 (C-07) offset 17 (MSB=1) drain element 3
+# [ERR][S10] t=5730ns exp=26 got=0 (C-07) offset 17 (MSB=1) drain element 4
+# [ERR][S10] t=5740ns exp=27 got=0 (C-07) offset 17 (MSB=1) drain element 5
+# [ERR][S10] t=5750ns exp=28 got=0 (C-07) offset 17 (MSB=1) drain element 6
+# [ERR][S10] t=5760ns exp=29 got=0 (C-07) offset 17 (MSB=1) drain element 7
+# [ERR][S10] t=5770ns exp=2a got=0 (C-07) offset 17 (MSB=1) drain element 8
+# [ERR][S10] t=5780ns exp=2b got=0 (C-07) offset 17 (MSB=1) drain element 9
+# [ERR][S10] t=5790ns exp=2c got=0 (C-07) offset 17 (MSB=1) drain element 10
+# [ERR][S10] t=5800ns exp=2d got=0 (C-07) offset 17 (MSB=1) drain element 11
+# [ERR][S10] t=5810ns exp=2e got=0 (C-07) offset 17 (MSB=1) drain element 12
+# [ERR][S10] t=5820ns exp=2f got=0 (C-07) offset 17 (MSB=1) drain element 13
+# [ERR][S10] t=5830ns exp=30 got=0 (C-07) offset 17 (MSB=1) drain element 14
+# [ERR][S10] t=5840ns exp=31 got=0 (C-07) offset 17 (MSB=1) drain element 15
+# [ERR][S10] t=5850ns exp=1 got=0 (S-02) offset 17 (MSB=1) empty at drain end
+# [ERR][S10] t=6060ns exp=10 got=0 (S-01) advance 24: count after 16 writes
+# [ERR][S10] t=6070ns exp=11 got=0 (C-07) advance 24: element 0
+# [ERR][S10] t=6080ns exp=12 got=0 (C-07) advance 24: element 1
+# [ERR][S10] t=6090ns exp=13 got=0 (C-07) advance 24: element 2
+# [ERR][S10] t=6100ns exp=14 got=0 (C-07) advance 24: element 3
+# [ERR][S10] t=6110ns exp=15 got=0 (C-07) advance 24: element 4
+# [ERR][S10] t=6120ns exp=16 got=0 (C-07) advance 24: element 5
+# [ERR][S10] t=6130ns exp=17 got=0 (C-07) advance 24: element 6
+# [ERR][S10] t=6140ns exp=18 got=0 (C-07) advance 24: element 7
+# [ERR][S10] t=6150ns exp=19 got=0 (C-07) advance 24: element 8
+# [ERR][S10] t=6160ns exp=1a got=0 (C-07) advance 24: element 9
+# [ERR][S10] t=6170ns exp=1b got=0 (C-07) advance 24: element 10
+# [ERR][S10] t=6180ns exp=1c got=0 (C-07) advance 24: element 11
+# [ERR][S10] t=6190ns exp=1d got=0 (C-07) advance 24: element 12
+# [ERR][S10] t=6200ns exp=1e got=0 (C-07) advance 24: element 13
+# [ERR][S10] t=6210ns exp=1f got=0 (C-07) advance 24: element 14
+# [ERR][S10] t=6220ns exp=20 got=0 (C-07) advance 24: element 15
+# [ERR][S10] t=6230ns exp=1 got=0 (S-02) advance 24: empty after chunk
+# [ERR][S10] t=6320ns exp=8 got=0 (S-01) advance 24: count after 8 writes
+# [ERR][S10] t=6330ns exp=21 got=0 (C-07) advance 24: element 0
+# [ERR][S10] t=6340ns exp=22 got=0 (C-07) advance 24: element 1
+# [ERR][S10] t=6350ns exp=23 got=0 (C-07) advance 24: element 2
+# [ERR][S10] t=6360ns exp=24 got=0 (C-07) advance 24: element 3
+# [ERR][S10] t=6370ns exp=25 got=0 (C-07) advance 24: element 4
+# [ERR][S10] t=6380ns exp=26 got=0 (C-07) advance 24: element 5
+# [ERR][S10] t=6390ns exp=27 got=0 (C-07) advance 24: element 6
+# [ERR][S10] t=6400ns exp=28 got=0 (C-07) advance 24: element 7
+# [ERR][S10] t=6410ns exp=1 got=0 (S-02) advance 24: empty after chunk
+# [ERR][S10] t=6420ns exp=1 got=0 (S-02) offset 24 (MSB=1) empty during fill
+# [ERR][S10] t=6580ns exp=1 got=0 (S-02) offset 24 (MSB=1) full at fill end
+# [ERR][S10] t=6580ns exp=10 got=0 (S-01) offset 24 (MSB=1) count at fill end
+# [ERR][S10] t=6590ns exp=1 got=0 (S-02) offset 24 (MSB=1) full during drain
+# [ERR][S10] t=6590ns exp=29 got=0 (C-07) offset 24 (MSB=1) drain element 0
+# [ERR][S10] t=6600ns exp=2a got=0 (C-07) offset 24 (MSB=1) drain element 1
+# [ERR][S10] t=6610ns exp=2b got=0 (C-07) offset 24 (MSB=1) drain element 2
+# [ERR][S10] t=6620ns exp=2c got=0 (C-07) offset 24 (MSB=1) drain element 3
+# [ERR][S10] t=6630ns exp=2d got=0 (C-07) offset 24 (MSB=1) drain element 4
+# [ERR][S10] t=6640ns exp=2e got=0 (C-07) offset 24 (MSB=1) drain element 5
+# [ERR][S10] t=6650ns exp=2f got=0 (C-07) offset 24 (MSB=1) drain element 6
+# [ERR][S10] t=6660ns exp=30 got=0 (C-07) offset 24 (MSB=1) drain element 7
+# [ERR][S10] t=6670ns exp=31 got=0 (C-07) offset 24 (MSB=1) drain element 8
+# [ERR][S10] t=6680ns exp=32 got=0 (C-07) offset 24 (MSB=1) drain element 9
+# [ERR][S10] t=6690ns exp=33 got=0 (C-07) offset 24 (MSB=1) drain element 10
+# [ERR][S10] t=6700ns exp=34 got=0 (C-07) offset 24 (MSB=1) drain element 11
+# [ERR][S10] t=6710ns exp=35 got=0 (C-07) offset 24 (MSB=1) drain element 12
+# [ERR][S10] t=6720ns exp=36 got=0 (C-07) offset 24 (MSB=1) drain element 13
+# [ERR][S10] t=6730ns exp=37 got=0 (C-07) offset 24 (MSB=1) drain element 14
+# [ERR][S10] t=6740ns exp=38 got=0 (C-07) offset 24 (MSB=1) drain element 15
+# [ERR][S10] t=6750ns exp=1 got=0 (S-02) offset 24 (MSB=1) empty at drain end
+# [ERR][S10] t=6960ns exp=10 got=0 (S-01) advance 31: count after 16 writes
+# [ERR][S10] t=6970ns exp=11 got=0 (C-07) advance 31: element 0
+# [ERR][S10] t=6980ns exp=12 got=0 (C-07) advance 31: element 1
+# [ERR][S10] t=6990ns exp=13 got=0 (C-07) advance 31: element 2
+# [ERR][S10] t=7000ns exp=14 got=0 (C-07) advance 31: element 3
+# [ERR][S10] t=7010ns exp=15 got=0 (C-07) advance 31: element 4
+# [ERR][S10] t=7020ns exp=16 got=0 (C-07) advance 31: element 5
+# [ERR][S10] t=7030ns exp=17 got=0 (C-07) advance 31: element 6
+# [ERR][S10] t=7040ns exp=18 got=0 (C-07) advance 31: element 7
+# [ERR][S10] t=7050ns exp=19 got=0 (C-07) advance 31: element 8
+# [ERR][S10] t=7060ns exp=1a got=0 (C-07) advance 31: element 9
+# [ERR][S10] t=7070ns exp=1b got=0 (C-07) advance 31: element 10
+# [ERR][S10] t=7080ns exp=1c got=0 (C-07) advance 31: element 11
+# [ERR][S10] t=7090ns exp=1d got=0 (C-07) advance 31: element 12
+# [ERR][S10] t=7100ns exp=1e got=0 (C-07) advance 31: element 13
+# [ERR][S10] t=7110ns exp=1f got=0 (C-07) advance 31: element 14
+# [ERR][S10] t=7120ns exp=20 got=0 (C-07) advance 31: element 15
+# [ERR][S10] t=7130ns exp=1 got=0 (S-02) advance 31: empty after chunk
+# [ERR][S10] t=7290ns exp=f got=0 (S-01) advance 31: count after 15 writes
+# [ERR][S10] t=7300ns exp=21 got=0 (C-07) advance 31: element 0
+# [ERR][S10] t=7310ns exp=22 got=0 (C-07) advance 31: element 1
+# [ERR][S10] t=7320ns exp=23 got=0 (C-07) advance 31: element 2
+# [ERR][S10] t=7330ns exp=24 got=0 (C-07) advance 31: element 3
+# [ERR][S10] t=7340ns exp=25 got=0 (C-07) advance 31: element 4
+# [ERR][S10] t=7350ns exp=26 got=0 (C-07) advance 31: element 5
+# [ERR][S10] t=7360ns exp=27 got=0 (C-07) advance 31: element 6
+# [ERR][S10] t=7370ns exp=28 got=0 (C-07) advance 31: element 7
+# [ERR][S10] t=7380ns exp=29 got=0 (C-07) advance 31: element 8
+# [ERR][S10] t=7390ns exp=2a got=0 (C-07) advance 31: element 9
+# [ERR][S10] t=7400ns exp=2b got=0 (C-07) advance 31: element 10
+# [ERR][S10] t=7410ns exp=2c got=0 (C-07) advance 31: element 11
+# [ERR][S10] t=7420ns exp=2d got=0 (C-07) advance 31: element 12
+# [ERR][S10] t=7430ns exp=2e got=0 (C-07) advance 31: element 13
+# [ERR][S10] t=7440ns exp=2f got=0 (C-07) advance 31: element 14
+# [ERR][S10] t=7450ns exp=1 got=0 (S-02) advance 31: empty after chunk
+# [ERR][S10] t=7460ns exp=1 got=0 (S-02) offset 31 (MSB=1) empty during fill
+# [ERR][S10] t=7620ns exp=1 got=0 (S-02) offset 31 (MSB=1) full at fill end
+# [ERR][S10] t=7620ns exp=10 got=0 (S-01) offset 31 (MSB=1) count at fill end
+# [ERR][S10] t=7630ns exp=1 got=0 (S-02) offset 31 (MSB=1) full during drain
+# [ERR][S10] t=7630ns exp=30 got=0 (C-07) offset 31 (MSB=1) drain element 0
+# [ERR][S10] t=7640ns exp=31 got=0 (C-07) offset 31 (MSB=1) drain element 1
+# [ERR][S10] t=7650ns exp=32 got=0 (C-07) offset 31 (MSB=1) drain element 2
+# [ERR][S10] t=7660ns exp=33 got=0 (C-07) offset 31 (MSB=1) drain element 3
+# [ERR][S10] t=7670ns exp=34 got=0 (C-07) offset 31 (MSB=1) drain element 4
+# [ERR][S10] t=7680ns exp=35 got=0 (C-07) offset 31 (MSB=1) drain element 5
+# [ERR][S10] t=7690ns exp=36 got=0 (C-07) offset 31 (MSB=1) drain element 6
+# [ERR][S10] t=7700ns exp=37 got=0 (C-07) offset 31 (MSB=1) drain element 7
+# [ERR][S10] t=7710ns exp=38 got=0 (C-07) offset 31 (MSB=1) drain element 8
+# [ERR][S10] t=7720ns exp=39 got=0 (C-07) offset 31 (MSB=1) drain element 9
+# [ERR][S10] t=7730ns exp=3a got=0 (C-07) offset 31 (MSB=1) drain element 10
+# [ERR][S10] t=7740ns exp=3b got=0 (C-07) offset 31 (MSB=1) drain element 11
+# [ERR][S10] t=7750ns exp=3c got=0 (C-07) offset 31 (MSB=1) drain element 12
+# [ERR][S10] t=7760ns exp=3d got=0 (C-07) offset 31 (MSB=1) drain element 13
+# [ERR][S10] t=7770ns exp=3e got=0 (C-07) offset 31 (MSB=1) drain element 14
+# [ERR][S10] t=7780ns exp=3f got=0 (C-07) offset 31 (MSB=1) drain element 15
+# [ERR][S10] t=7790ns exp=1 got=0 (S-02) offset 31 (MSB=1) empty at drain end
+# INFO S10 checks=1395 errors=303
+# TEST S10 FAIL
+# [ERR][S11] t=8000ns exp=1 got=0 (S-02) full before mid-run reset
+# [ERR][S11] t=8030ns exp=1 got=0 (C-05) empty after mid-run reset
+# [ERR][S11] t=8120ns exp=8 got=0 (C-05) count = new writes only
+# [ERR][S11] t=8130ns exp=c1 got=0 (C-05) new data only, element 0
+# [ERR][S11] t=8140ns exp=c2 got=0 (C-05) new data only, element 1
+# [ERR][S11] t=8150ns exp=c3 got=0 (C-05) new data only, element 2
+# [ERR][S11] t=8160ns exp=c4 got=0 (C-05) new data only, element 3
+# [ERR][S11] t=8170ns exp=c5 got=0 (C-05) new data only, element 4
+# [ERR][S11] t=8180ns exp=c6 got=0 (C-05) new data only, element 5
+# [ERR][S11] t=8190ns exp=c7 got=0 (C-05) new data only, element 6
+# [ERR][S11] t=8200ns exp=c8 got=0 (C-05) new data only, element 7
+# [ERR][S11] t=8210ns exp=1 got=0 (C-05) empty after new data read (no old data left)
+# INFO S11 checks=59 errors=12
+# TEST S11 FAIL
+# [ERR][S12] t=8420ns exp=10 got=0 (S-04) count after pattern batch
+# [ERR][S12] t=8440ns exp=ffffffff got=0 (C-07) pattern ffffffff
+# [ERR][S12] t=8450ns exp=55555555 got=0 (C-07) pattern 55555555
+# [ERR][S12] t=8460ns exp=aaaaaaaa got=0 (C-07) pattern aaaaaaaa
+# [ERR][S12] t=8470ns exp=1 got=0 (C-07) pattern 1
+# [ERR][S12] t=8480ns exp=2 got=0 (C-07) pattern 2
+# [ERR][S12] t=8490ns exp=4 got=0 (C-07) pattern 4
+# [ERR][S12] t=8500ns exp=8 got=0 (C-07) pattern 8
+# [ERR][S12] t=8510ns exp=10 got=0 (C-07) pattern 10
+# [ERR][S12] t=8520ns exp=20 got=0 (C-07) pattern 20
+# [ERR][S12] t=8530ns exp=40 got=0 (C-07) pattern 40
+# [ERR][S12] t=8540ns exp=80 got=0 (C-07) pattern 80
+# [ERR][S12] t=8550ns exp=100 got=0 (C-07) pattern 100
+# [ERR][S12] t=8560ns exp=200 got=0 (C-07) pattern 200
+# [ERR][S12] t=8570ns exp=400 got=0 (C-07) pattern 400
+# [ERR][S12] t=8580ns exp=800 got=0 (C-07) pattern 800
+# [ERR][S12] t=8590ns exp=1 got=0 (S-02) empty after pattern batch
+# [ERR][S12] t=8760ns exp=10 got=0 (S-04) count after pattern batch
+# [ERR][S12] t=8770ns exp=1000 got=0 (C-07) pattern 1000
+# [ERR][S12] t=8780ns exp=2000 got=0 (C-07) pattern 2000
+# [ERR][S12] t=8790ns exp=4000 got=0 (C-07) pattern 4000
+# [ERR][S12] t=8800ns exp=8000 got=0 (C-07) pattern 8000
+# [ERR][S12] t=8810ns exp=10000 got=0 (C-07) pattern 10000
+# [ERR][S12] t=8820ns exp=20000 got=0 (C-07) pattern 20000
+# [ERR][S12] t=8830ns exp=40000 got=0 (C-07) pattern 40000
+# [ERR][S12] t=8840ns exp=80000 got=0 (C-07) pattern 80000
+# [ERR][S12] t=8850ns exp=100000 got=0 (C-07) pattern 100000
+# [ERR][S12] t=8860ns exp=200000 got=0 (C-07) pattern 200000
+# [ERR][S12] t=8870ns exp=400000 got=0 (C-07) pattern 400000
+# [ERR][S12] t=8880ns exp=800000 got=0 (C-07) pattern 800000
+# [ERR][S12] t=8890ns exp=1000000 got=0 (C-07) pattern 1000000
+# [ERR][S12] t=8900ns exp=2000000 got=0 (C-07) pattern 2000000
+# [ERR][S12] t=8910ns exp=4000000 got=0 (C-07) pattern 4000000
+# [ERR][S12] t=8920ns exp=8000000 got=0 (C-07) pattern 8000000
+# [ERR][S12] t=8930ns exp=1 got=0 (S-02) empty after pattern batch
+# [ERR][S12] t=8980ns exp=4 got=0 (S-04) count after pattern batch
+# [ERR][S12] t=8990ns exp=10000000 got=0 (C-07) pattern 10000000
+# [ERR][S12] t=9000ns exp=20000000 got=0 (C-07) pattern 20000000
+# [ERR][S12] t=9010ns exp=40000000 got=0 (C-07) pattern 40000000
+# [ERR][S12] t=9020ns exp=80000000 got=0 (C-07) pattern 80000000
+# [ERR][S12] t=9030ns exp=1 got=0 (S-02) empty after pattern batch
+# INFO S12 checks=156 errors=41
+# TEST S12 FAIL
+# [ERR][S13] t=9090ns exp=1 got=0 (S-04) count during write burst, cycle 1
+# [ERR][S13] t=9100ns exp=2 got=0 (S-04) count during write burst, cycle 2
+# [ERR][S13] t=9110ns exp=3 got=0 (S-04) count during write burst, cycle 3
+# [ERR][S13] t=9120ns exp=4 got=0 (S-04) count during write burst, cycle 4
+# [ERR][S13] t=9130ns exp=5 got=0 (S-04) count during write burst, cycle 5
+# [ERR][S13] t=9140ns exp=6 got=0 (S-04) count during write burst, cycle 6
+# [ERR][S13] t=9150ns exp=7 got=0 (S-04) count during write burst, cycle 7
+# [ERR][S13] t=9160ns exp=8 got=0 (S-04) count during write burst, cycle 8
+# [ERR][S13] t=9170ns exp=9 got=0 (S-04) count during write burst, cycle 9
+# [ERR][S13] t=9180ns exp=a got=0 (S-04) count during write burst, cycle 10
+# [ERR][S13] t=9190ns exp=b got=0 (S-04) count during write burst, cycle 11
+# [ERR][S13] t=9200ns exp=c got=0 (S-04) count during write burst, cycle 12
+# [ERR][S13] t=9210ns exp=d got=0 (S-04) count during write burst, cycle 13
+# [ERR][S13] t=9220ns exp=e got=0 (S-04) count during write burst, cycle 14
+# [ERR][S13] t=9230ns exp=f got=0 (S-04) count during write burst, cycle 15
+# [ERR][S13] t=9240ns exp=1 got=0 (S-02) full after write burst
+# [ERR][S13] t=9240ns exp=10 got=0 (S-04) count after write burst
+# [ERR][S13] t=9250ns exp=10 got=0 (S-04) count during read burst, cycle 0
+# [ERR][S13] t=9250ns exp=d1 got=0 (C-07) burst element 0
+# [ERR][S13] t=9260ns exp=f got=0 (S-04) count during read burst, cycle 1
+# [ERR][S13] t=9260ns exp=d2 got=0 (C-07) burst element 1
+# [ERR][S13] t=9270ns exp=e got=0 (S-04) count during read burst, cycle 2
+# [ERR][S13] t=9270ns exp=d3 got=0 (C-07) burst element 2
+# [ERR][S13] t=9280ns exp=d got=0 (S-04) count during read burst, cycle 3
+# [ERR][S13] t=9280ns exp=d4 got=0 (C-07) burst element 3
+# [ERR][S13] t=9290ns exp=c got=0 (S-04) count during read burst, cycle 4
+# [ERR][S13] t=9290ns exp=d5 got=0 (C-07) burst element 4
+# [ERR][S13] t=9300ns exp=b got=0 (S-04) count during read burst, cycle 5
+# [ERR][S13] t=9300ns exp=d6 got=0 (C-07) burst element 5
+# [ERR][S13] t=9310ns exp=a got=0 (S-04) count during read burst, cycle 6
+# [ERR][S13] t=9310ns exp=d7 got=0 (C-07) burst element 6
+# [ERR][S13] t=9320ns exp=9 got=0 (S-04) count during read burst, cycle 7
+# [ERR][S13] t=9320ns exp=d8 got=0 (C-07) burst element 7
+# [ERR][S13] t=9330ns exp=8 got=0 (S-04) count during read burst, cycle 8
+# [ERR][S13] t=9330ns exp=d9 got=0 (C-07) burst element 8
+# [ERR][S13] t=9340ns exp=7 got=0 (S-04) count during read burst, cycle 9
+# [ERR][S13] t=9340ns exp=da got=0 (C-07) burst element 9
+# [ERR][S13] t=9350ns exp=6 got=0 (S-04) count during read burst, cycle 10
+# [ERR][S13] t=9350ns exp=db got=0 (C-07) burst element 10
+# [ERR][S13] t=9360ns exp=5 got=0 (S-04) count during read burst, cycle 11
+# [ERR][S13] t=9360ns exp=dc got=0 (C-07) burst element 11
+# [ERR][S13] t=9370ns exp=4 got=0 (S-04) count during read burst, cycle 12
+# [ERR][S13] t=9370ns exp=dd got=0 (C-07) burst element 12
+# [ERR][S13] t=9380ns exp=3 got=0 (S-04) count during read burst, cycle 13
+# [ERR][S13] t=9380ns exp=de got=0 (C-07) burst element 13
+# [ERR][S13] t=9390ns exp=2 got=0 (S-04) count during read burst, cycle 14
+# [ERR][S13] t=9390ns exp=df got=0 (C-07) burst element 14
+# [ERR][S13] t=9400ns exp=1 got=0 (S-04) count during read burst, cycle 15
+# [ERR][S13] t=9400ns exp=e0 got=0 (C-07) burst element 15
+# [ERR][S13] t=9410ns exp=1 got=0 (S-02) empty after read burst
+# INFO S13 checks=167 errors=50
+# TEST S13 FAIL
+# [ERR][S14] t=9460ns exp=1 got=0 (S-02) empty, cycle 0
+# [ERR][S14] t=9470ns exp=1 got=0 (S-04) count, cycle 1
+# [ERR][S14] t=9470ns exp=e1 got=0 (C-01) head, cycle 1
+# [ERR][S14] t=9480ns exp=1 got=0 (S-04) count, cycle 2
+# [ERR][S14] t=9480ns exp=e1 got=0 (C-01) head, cycle 2
+# [ERR][S14] t=9490ns exp=2 got=0 (S-04) count, cycle 3
+# [ERR][S14] t=9490ns exp=e1 got=0 (C-01) head, cycle 3
+# [ERR][S14] t=9500ns exp=2 got=0 (S-04) count, cycle 4
+# [ERR][S14] t=9500ns exp=e1 got=0 (C-01) head, cycle 4
+# [ERR][S14] t=9510ns exp=1 got=0 (S-04) count, cycle 5
+# [ERR][S14] t=9510ns exp=e2 got=0 (C-01) head, cycle 5
+# [ERR][S14] t=9520ns exp=1 got=0 (S-04) count, cycle 6
+# [ERR][S14] t=9520ns exp=e2 got=0 (C-01) head, cycle 6
+# [ERR][S14] t=9530ns exp=1 got=0 (S-04) count, cycle 7
+# [ERR][S14] t=9530ns exp=e3 got=0 (C-01) head, cycle 7
+# [ERR][S14] t=9540ns exp=1 got=0 (S-02) empty, cycle 8
+# [ERR][S14] t=9550ns exp=1 got=0 (S-02) empty, cycle 9
+# [ERR][S14] t=9560ns exp=1 got=0 (S-04) count, cycle 10
+# [ERR][S14] t=9560ns exp=e4 got=0 (C-01) head, cycle 10
+# [ERR][S14] t=9570ns exp=1 got=0 (S-02) empty, cycle 11
+# [ERR][S14] t=9580ns exp=1 got=0 (S-02) empty, cycle 12
+# INFO S14 checks=73 errors=21
+# TEST S14 FAIL
+# [ERR][S15/S1] t=9660ns exp=1 got=0 (C-05) empty after reset
+# [ERR][S15/S1] t=9670ns exp=1 got=0 (C-05) empty 1 cycle after reset
+# [ERR][S15/S2] t=9720ns exp=1 got=0 (S-02) empty before write is sampled
+# [ERR][S15/S2] t=9730ns exp=1 got=0 (S-04) count 0->1
+# [ERR][S15/S2] t=9730ns exp=21 got=0 (C-01) head after write
+# [ERR][S15/S2] t=9740ns exp=21 got=0 (C-01) head before read is sampled
+# [ERR][S15/S2] t=9750ns exp=1 got=0 (S-02) empty rises after read
+# [ERR][S15/S3] t=9950ns exp=f got=0 (S-04) count=DEPTH-1
+# [ERR][S15/S3] t=9960ns exp=1 got=0 (S-02) full after DEPTH writes
+# [ERR][S15/S3] t=9960ns exp=10 got=0 (S-04) count after DEPTH writes
+# [ERR][S15/S4] t=10170ns exp=1 got=0 (S-02) full before drain
+# [ERR][S15/S4] t=10180ns exp=41 got=0 (C-07) FIFO order element 0
+# [ERR][S15/S4] t=10190ns exp=42 got=0 (C-07) FIFO order element 1
+# [ERR][S15/S4] t=10200ns exp=43 got=0 (C-07) FIFO order element 2
+# [ERR][S15/S4] t=10210ns exp=44 got=0 (C-07) FIFO order element 3
+# [ERR][S15/S4] t=10220ns exp=45 got=0 (C-07) FIFO order element 4
+# [ERR][S15/S4] t=10230ns exp=46 got=0 (C-07) FIFO order element 5
+# [ERR][S15/S4] t=10240ns exp=47 got=0 (C-07) FIFO order element 6
+# [ERR][S15/S4] t=10250ns exp=48 got=0 (C-07) FIFO order element 7
+# [ERR][S15/S4] t=10260ns exp=49 got=0 (C-07) FIFO order element 8
+# [ERR][S15/S4] t=10270ns exp=4a got=0 (C-07) FIFO order element 9
+# [ERR][S15/S4] t=10280ns exp=4b got=0 (C-07) FIFO order element 10
+# [ERR][S15/S4] t=10290ns exp=4c got=0 (C-07) FIFO order element 11
+# [ERR][S15/S4] t=10300ns exp=4d got=0 (C-07) FIFO order element 12
+# [ERR][S15/S4] t=10310ns exp=4e got=0 (C-07) FIFO order element 13
+# [ERR][S15/S4] t=10320ns exp=4f got=0 (C-07) FIFO order element 14
+# [ERR][S15/S4] t=10330ns exp=50 got=0 (C-07) FIFO order element 15
+# [ERR][S15/S4] t=10340ns exp=1 got=0 (C-01) empty rises after last pop
+# [ERR][S15/S5] t=10550ns exp=1 got=0 (S-02) full before rejected write
+# [ERR][S15/S5] t=10570ns exp=1 got=0 (C-04) overflow pulse 1 cycle after attempt
+# [ERR][S15/S5] t=10570ns exp=10 got=0 (C-03) count unchanged after rejected write
+# [ERR][S15/S5] t=10570ns exp=1 got=0 (C-03) full unchanged after rejected write
+# [ERR][S15/S5] t=10570ns exp=51 got=0 (C-03) head unchanged after rejected write
+# [ERR][S15/S5] t=10600ns exp=1 got=0 (C-04) overflow for 1st of 2 consecutive attempts
+# [ERR][S15/S5] t=10610ns exp=1 got=0 (C-04) overflow for 2nd of 2 consecutive attempts
+# [ERR][S15/S5] t=10620ns exp=10 got=0 (C-03) count unchanged after 3 rejected writes
+# [ERR][S15/S5] t=10630ns exp=51 got=0 (C-03) old data intact element 0
+# [ERR][S15/S5] t=10640ns exp=52 got=0 (C-03) old data intact element 1
+# [ERR][S15/S5] t=10650ns exp=53 got=0 (C-03) old data intact element 2
+# [ERR][S15/S5] t=10660ns exp=54 got=0 (C-03) old data intact element 3
+# [ERR][S15/S5] t=10670ns exp=55 got=0 (C-03) old data intact element 4
+# [ERR][S15/S5] t=10680ns exp=56 got=0 (C-03) old data intact element 5
+# [ERR][S15/S5] t=10690ns exp=57 got=0 (C-03) old data intact element 6
+# [ERR][S15/S5] t=10700ns exp=58 got=0 (C-03) old data intact element 7
+# [ERR][S15/S5] t=10710ns exp=59 got=0 (C-03) old data intact element 8
+# [ERR][S15/S5] t=10720ns exp=5a got=0 (C-03) old data intact element 9
+# [ERR][S15/S5] t=10730ns exp=5b got=0 (C-03) old data intact element 10
+# [ERR][S15/S5] t=10740ns exp=5c got=0 (C-03) old data intact element 11
+# [ERR][S15/S5] t=10750ns exp=5d got=0 (C-03) old data intact element 12
+# [ERR][S15/S5] t=10760ns exp=5e got=0 (C-03) old data intact element 13
+# [ERR][S15/S5] t=10770ns exp=5f got=0 (C-03) old data intact element 14
+# [ERR][S15/S5] t=10780ns exp=60 got=0 (C-03) old data intact element 15
+# [ERR][S15/S5] t=10790ns exp=1 got=0 (C-03) empty after reading DEPTH (rejected data not stored)
+# [ERR][S15/S6] t=10840ns exp=1 got=0 (S-02) empty before rejected read
+# [ERR][S15/S6] t=10850ns exp=1 got=0 (C-04) underflow pulse 1 cycle after attempt
+# [ERR][S15/S6] t=10850ns exp=1 got=0 (C-03) empty unchanged after rejected read
+# [ERR][S15/S6] t=10880ns exp=1 got=0 (C-04) underflow for 1st of 2 consecutive attempts
+# [ERR][S15/S6] t=10890ns exp=1 got=0 (C-04) underflow for 2nd of 2 consecutive attempts
+# [ERR][S15/S6] t=10900ns exp=1 got=0 (C-03) empty unchanged after 3 rejected reads
+# [ERR][S15/S6] t=10920ns exp=1 got=0 (C-03) count=1 after write following rejected read
+# [ERR][S15/S6] t=10920ns exp=61 got=0 (C-03) head after write following rejected read
+# [ERR][S15/S6] t=10940ns exp=1 got=0 (C-03) empty after round trip
+# [ERR][S15/S7] t=11070ns exp=8 got=0 (S-03) count unchanged, simul op 0
+# [ERR][S15/S7] t=11070ns exp=71 got=0 (C-07) head order, simul op 0
+# [ERR][S15/S7] t=11080ns exp=8 got=0 (S-03) count unchanged, simul op 1
+# [ERR][S15/S7] t=11080ns exp=72 got=0 (C-07) head order, simul op 1
+# [ERR][S15/S7] t=11090ns exp=8 got=0 (S-03) count unchanged, simul op 2
+# [ERR][S15/S7] t=11090ns exp=73 got=0 (C-07) head order, simul op 2
+# [ERR][S15/S7] t=11100ns exp=8 got=0 (S-03) count unchanged, simul op 3
+# [ERR][S15/S7] t=11100ns exp=74 got=0 (C-07) head order, simul op 3
+# [ERR][S15/S7] t=11110ns exp=8 got=0 (S-03) count unchanged, simul op 4
+# [ERR][S15/S7] t=11110ns exp=75 got=0 (C-07) head order, simul op 4
+# [ERR][S15/S7] t=11120ns exp=8 got=0 (S-03) count unchanged, simul op 5
+# [ERR][S15/S7] t=11120ns exp=76 got=0 (C-07) head order, simul op 5
+# [ERR][S15/S7] t=11130ns exp=8 got=0 (S-03) count unchanged, simul op 6
+# [ERR][S15/S7] t=11130ns exp=77 got=0 (C-07) head order, simul op 6
+# [ERR][S15/S7] t=11140ns exp=8 got=0 (S-03) count unchanged, simul op 7
+# [ERR][S15/S7] t=11140ns exp=78 got=0 (C-07) head order, simul op 7
+# [ERR][S15/S7] t=11150ns exp=8 got=0 (S-03) count unchanged, simul op 8
+# [ERR][S15/S7] t=11150ns exp=79 got=0 (C-07) head order, simul op 8
+# [ERR][S15/S7] t=11160ns exp=8 got=0 (S-03) count unchanged, simul op 9
+# [ERR][S15/S7] t=11160ns exp=7a got=0 (C-07) head order, simul op 9
+# [ERR][S15/S7] t=11170ns exp=8 got=0 (S-03) count unchanged, simul op 10
+# [ERR][S15/S7] t=11170ns exp=7b got=0 (C-07) head order, simul op 10
+# [ERR][S15/S7] t=11180ns exp=8 got=0 (S-03) count unchanged, simul op 11
+# [ERR][S15/S7] t=11180ns exp=7c got=0 (C-07) head order, simul op 11
+# [ERR][S15/S7] t=11190ns exp=8 got=0 (S-03) count unchanged, simul op 12
+# [ERR][S15/S7] t=11190ns exp=7d got=0 (C-07) head order, simul op 12
+# [ERR][S15/S7] t=11200ns exp=8 got=0 (S-03) count unchanged, simul op 13
+# [ERR][S15/S7] t=11200ns exp=7e got=0 (C-07) head order, simul op 13
+# [ERR][S15/S7] t=11210ns exp=8 got=0 (S-03) count unchanged, simul op 14
+# [ERR][S15/S7] t=11210ns exp=7f got=0 (C-07) head order, simul op 14
+# [ERR][S15/S7] t=11220ns exp=8 got=0 (S-03) count unchanged, simul op 15
+# [ERR][S15/S7] t=11220ns exp=80 got=0 (C-07) head order, simul op 15
+# [ERR][S15/S7] t=11230ns exp=8 got=0 (S-03) count unchanged, simul op 16
+# [ERR][S15/S7] t=11230ns exp=81 got=0 (C-07) head order, simul op 16
+# [ERR][S15/S7] t=11240ns exp=8 got=0 (S-03) count unchanged, simul op 17
+# [ERR][S15/S7] t=11240ns exp=82 got=0 (C-07) head order, simul op 17
+# [ERR][S15/S7] t=11250ns exp=8 got=0 (S-03) count unchanged, simul op 18
+# [ERR][S15/S7] t=11250ns exp=83 got=0 (C-07) head order, simul op 18
+# [ERR][S15/S7] t=11260ns exp=8 got=0 (S-03) count unchanged, simul op 19
+# [ERR][S15/S7] t=11260ns exp=84 got=0 (C-07) head order, simul op 19
+# [ERR][S15/S7] t=11270ns exp=8 got=0 (S-03) count unchanged, simul op 20
+# [ERR][S15/S7] t=11270ns exp=85 got=0 (C-07) head order, simul op 20
+# [ERR][S15/S7] t=11280ns exp=8 got=0 (S-03) count unchanged, simul op 21
+# [ERR][S15/S7] t=11280ns exp=86 got=0 (C-07) head order, simul op 21
+# [ERR][S15/S7] t=11290ns exp=8 got=0 (S-03) count unchanged, simul op 22
+# [ERR][S15/S7] t=11290ns exp=87 got=0 (C-07) head order, simul op 22
+# [ERR][S15/S7] t=11300ns exp=8 got=0 (S-03) count unchanged, simul op 23
+# [ERR][S15/S7] t=11300ns exp=88 got=0 (C-07) head order, simul op 23
+# [ERR][S15/S7] t=11310ns exp=8 got=0 (S-03) count unchanged, simul op 24
+# [ERR][S15/S7] t=11310ns exp=89 got=0 (C-07) head order, simul op 24
+# [ERR][S15/S7] t=11320ns exp=8 got=0 (S-03) count unchanged, simul op 25
+# [ERR][S15/S7] t=11320ns exp=8a got=0 (C-07) head order, simul op 25
+# [ERR][S15/S7] t=11330ns exp=8 got=0 (S-03) count unchanged, simul op 26
+# [ERR][S15/S7] t=11330ns exp=8b got=0 (C-07) head order, simul op 26
+# [ERR][S15/S7] t=11340ns exp=8 got=0 (S-03) count unchanged, simul op 27
+# [ERR][S15/S7] t=11340ns exp=8c got=0 (C-07) head order, simul op 27
+# [ERR][S15/S7] t=11350ns exp=8 got=0 (S-03) count unchanged, simul op 28
+# [ERR][S15/S7] t=11350ns exp=8d got=0 (C-07) head order, simul op 28
+# [ERR][S15/S7] t=11360ns exp=8 got=0 (S-03) count unchanged, simul op 29
+# [ERR][S15/S7] t=11360ns exp=8e got=0 (C-07) head order, simul op 29
+# [ERR][S15/S7] t=11370ns exp=8 got=0 (S-03) count unchanged, simul op 30
+# [ERR][S15/S7] t=11370ns exp=8f got=0 (C-07) head order, simul op 30
+# [ERR][S15/S7] t=11380ns exp=8 got=0 (S-03) count unchanged, simul op 31
+# [ERR][S15/S7] t=11380ns exp=90 got=0 (C-07) head order, simul op 31
+# [ERR][S15/S7] t=11390ns exp=8 got=0 (S-03) count unchanged after simultaneous ops
+# [ERR][S15/S7] t=11400ns exp=91 got=0 (C-07) drain order element 0
+# [ERR][S15/S7] t=11410ns exp=92 got=0 (C-07) drain order element 1
+# [ERR][S15/S7] t=11420ns exp=93 got=0 (C-07) drain order element 2
+# [ERR][S15/S7] t=11430ns exp=94 got=0 (C-07) drain order element 3
+# [ERR][S15/S7] t=11440ns exp=95 got=0 (C-07) drain order element 4
+# [ERR][S15/S7] t=11450ns exp=96 got=0 (C-07) drain order element 5
+# [ERR][S15/S7] t=11460ns exp=97 got=0 (C-07) drain order element 6
+# [ERR][S15/S7] t=11470ns exp=98 got=0 (C-07) drain order element 7
+# [ERR][S15/S7] t=11480ns exp=1 got=0 (S-02) empty after drain
+# [ERR][S15/S8] t=11530ns exp=1 got=0 (S-02) empty before simultaneous op
+# [ERR][S15/S8] t=11540ns exp=1 got=0 (S-03) write accepted: count=1
+# [ERR][S15/S8] t=11540ns exp=1 got=0 (C-04) read rejected: underflow=1
+# [ERR][S15/S8] t=11540ns exp=81 got=0 (S-03) written element is head
+# [ERR][S15/S8] t=11550ns exp=1 got=0 (S-03) count still 1
+# [ERR][S15/S8] t=11570ns exp=1 got=0 (S-02) empty after reading the element
+# [ERR][S15/S9] t=11780ns exp=1 got=0 (S-02) full before simultaneous op
+# [ERR][S15/S9] t=11800ns exp=f got=0 (S-03) count=DEPTH-1
+# [ERR][S15/S9] t=11800ns exp=1 got=0 (C-04) write rejected: overflow=1
+# [ERR][S15/S9] t=11800ns exp=92 got=0 (S-03) head advanced by accepted read
+# [ERR][S15/S9] t=11820ns exp=92 got=0 (C-03) drain order element 0
+# [ERR][S15/S9] t=11830ns exp=93 got=0 (C-03) drain order element 1
+# [ERR][S15/S9] t=11840ns exp=94 got=0 (C-03) drain order element 2
+# [ERR][S15/S9] t=11850ns exp=95 got=0 (C-03) drain order element 3
+# [ERR][S15/S9] t=11860ns exp=96 got=0 (C-03) drain order element 4
+# [ERR][S15/S9] t=11870ns exp=97 got=0 (C-03) drain order element 5
+# [ERR][S15/S9] t=11880ns exp=98 got=0 (C-03) drain order element 6
+# [ERR][S15/S9] t=11890ns exp=99 got=0 (C-03) drain order element 7
+# [ERR][S15/S9] t=11900ns exp=9a got=0 (C-03) drain order element 8
+# [ERR][S15/S9] t=11910ns exp=9b got=0 (C-03) drain order element 9
+# [ERR][S15/S9] t=11920ns exp=9c got=0 (C-03) drain order element 10
+# [ERR][S15/S9] t=11930ns exp=9d got=0 (C-03) drain order element 11
+# [ERR][S15/S9] t=11940ns exp=9e got=0 (C-03) drain order element 12
+# [ERR][S15/S9] t=11950ns exp=9f got=0 (C-03) drain order element 13
+# [ERR][S15/S9] t=11960ns exp=a0 got=0 (C-03) drain order element 14
+# [ERR][S15/S9] t=11970ns exp=1 got=0 (C-03) empty after DEPTH-1 reads (rejected data not stored)
+# [ERR][S15/S10] t=12020ns exp=1 got=0 (S-02) lap 0 empty during fill
+# [ERR][S15/S10] t=12180ns exp=1 got=0 (S-02) lap 0 full at fill end
+# [ERR][S15/S10] t=12180ns exp=10 got=0 (S-01) lap 0 count at fill end
+# [ERR][S15/S10] t=12190ns exp=1 got=0 (S-02) lap 0 full during drain
+# [ERR][S15/S10] t=12190ns exp=11 got=0 (C-07) lap 0 drain element 0
+# [ERR][S15/S10] t=12200ns exp=12 got=0 (C-07) lap 0 drain element 1
+# [ERR][S15/S10] t=12210ns exp=13 got=0 (C-07) lap 0 drain element 2
+# [ERR][S15/S10] t=12220ns exp=14 got=0 (C-07) lap 0 drain element 3
+# [ERR][S15/S10] t=12230ns exp=15 got=0 (C-07) lap 0 drain element 4
+# [ERR][S15/S10] t=12240ns exp=16 got=0 (C-07) lap 0 drain element 5
+# [ERR][S15/S10] t=12250ns exp=17 got=0 (C-07) lap 0 drain element 6
+# [ERR][S15/S10] t=12260ns exp=18 got=0 (C-07) lap 0 drain element 7
+# [ERR][S15/S10] t=12270ns exp=19 got=0 (C-07) lap 0 drain element 8
+# [ERR][S15/S10] t=12280ns exp=1a got=0 (C-07) lap 0 drain element 9
+# [ERR][S15/S10] t=12290ns exp=1b got=0 (C-07) lap 0 drain element 10
+# [ERR][S15/S10] t=12300ns exp=1c got=0 (C-07) lap 0 drain element 11
+# [ERR][S15/S10] t=12310ns exp=1d got=0 (C-07) lap 0 drain element 12
+# [ERR][S15/S10] t=12320ns exp=1e got=0 (C-07) lap 0 drain element 13
+# [ERR][S15/S10] t=12330ns exp=1f got=0 (C-07) lap 0 drain element 14
+# [ERR][S15/S10] t=12340ns exp=20 got=0 (C-07) lap 0 drain element 15
+# [ERR][S15/S10] t=12350ns exp=1 got=0 (S-02) lap 0 empty at drain end
+# [ERR][S15/S10] t=12360ns exp=1 got=0 (S-02) lap 1 empty during fill
+# [ERR][S15/S10] t=12520ns exp=1 got=0 (S-02) lap 1 full at fill end
+# [ERR][S15/S10] t=12520ns exp=10 got=0 (S-01) lap 1 count at fill end
+# [ERR][S15/S10] t=12530ns exp=1 got=0 (S-02) lap 1 full during drain
+# [ERR][S15/S10] t=12530ns exp=21 got=0 (C-07) lap 1 drain element 0
+# [ERR][S15/S10] t=12540ns exp=22 got=0 (C-07) lap 1 drain element 1
+# [ERR][S15/S10] t=12550ns exp=23 got=0 (C-07) lap 1 drain element 2
+# [ERR][S15/S10] t=12560ns exp=24 got=0 (C-07) lap 1 drain element 3
+# [ERR][S15/S10] t=12570ns exp=25 got=0 (C-07) lap 1 drain element 4
+# [ERR][S15/S10] t=12580ns exp=26 got=0 (C-07) lap 1 drain element 5
+# [ERR][S15/S10] t=12590ns exp=27 got=0 (C-07) lap 1 drain element 6
+# [ERR][S15/S10] t=12600ns exp=28 got=0 (C-07) lap 1 drain element 7
+# [ERR][S15/S10] t=12610ns exp=29 got=0 (C-07) lap 1 drain element 8
+# [ERR][S15/S10] t=12620ns exp=2a got=0 (C-07) lap 1 drain element 9
+# [ERR][S15/S10] t=12630ns exp=2b got=0 (C-07) lap 1 drain element 10
+# [ERR][S15/S10] t=12640ns exp=2c got=0 (C-07) lap 1 drain element 11
+# [ERR][S15/S10] t=12650ns exp=2d got=0 (C-07) lap 1 drain element 12
+# [ERR][S15/S10] t=12660ns exp=2e got=0 (C-07) lap 1 drain element 13
+# [ERR][S15/S10] t=12670ns exp=2f got=0 (C-07) lap 1 drain element 14
+# [ERR][S15/S10] t=12680ns exp=30 got=0 (C-07) lap 1 drain element 15
+# [ERR][S15/S10] t=12690ns exp=1 got=0 (S-02) lap 1 empty at drain end
+# [ERR][S15/S10] t=12700ns exp=1 got=0 (S-02) lap 2 empty during fill
+# [ERR][S15/S10] t=12860ns exp=1 got=0 (S-02) lap 2 full at fill end
+# [ERR][S15/S10] t=12860ns exp=10 got=0 (S-01) lap 2 count at fill end
+# [ERR][S15/S10] t=12870ns exp=1 got=0 (S-02) lap 2 full during drain
+# [ERR][S15/S10] t=12870ns exp=31 got=0 (C-07) lap 2 drain element 0
+# [ERR][S15/S10] t=12880ns exp=32 got=0 (C-07) lap 2 drain element 1
+# [ERR][S15/S10] t=12890ns exp=33 got=0 (C-07) lap 2 drain element 2
+# [ERR][S15/S10] t=12900ns exp=34 got=0 (C-07) lap 2 drain element 3
+# [ERR][S15/S10] t=12910ns exp=35 got=0 (C-07) lap 2 drain element 4
+# [ERR][S15/S10] t=12920ns exp=36 got=0 (C-07) lap 2 drain element 5
+# [ERR][S15/S10] t=12930ns exp=37 got=0 (C-07) lap 2 drain element 6
+# [ERR][S15/S10] t=12940ns exp=38 got=0 (C-07) lap 2 drain element 7
+# [ERR][S15/S10] t=12950ns exp=39 got=0 (C-07) lap 2 drain element 8
+# [ERR][S15/S10] t=12960ns exp=3a got=0 (C-07) lap 2 drain element 9
+# [ERR][S15/S10] t=12970ns exp=3b got=0 (C-07) lap 2 drain element 10
+# [ERR][S15/S10] t=12980ns exp=3c got=0 (C-07) lap 2 drain element 11
+# [ERR][S15/S10] t=12990ns exp=3d got=0 (C-07) lap 2 drain element 12
+# [ERR][S15/S10] t=13000ns exp=3e got=0 (C-07) lap 2 drain element 13
+# [ERR][S15/S10] t=13010ns exp=3f got=0 (C-07) lap 2 drain element 14
+# [ERR][S15/S10] t=13020ns exp=40 got=0 (C-07) lap 2 drain element 15
+# [ERR][S15/S10] t=13030ns exp=1 got=0 (S-02) lap 2 empty at drain end
+# [ERR][S15/S10] t=13090ns exp=1 got=0 (S-01) advance 1: count after 1 writes
+# [ERR][S15/S10] t=13100ns exp=11 got=0 (C-07) advance 1: element 0
+# [ERR][S15/S10] t=13110ns exp=1 got=0 (S-02) advance 1: empty after chunk
+# [ERR][S15/S10] t=13120ns exp=1 got=0 (S-02) offset 1 (MSB=0) empty during fill
+# [ERR][S15/S10] t=13280ns exp=1 got=0 (S-02) offset 1 (MSB=0) full at fill end
+# [ERR][S15/S10] t=13280ns exp=10 got=0 (S-01) offset 1 (MSB=0) count at fill end
+# [ERR][S15/S10] t=13290ns exp=1 got=0 (S-02) offset 1 (MSB=0) full during drain
+# [ERR][S15/S10] t=13290ns exp=12 got=0 (C-07) offset 1 (MSB=0) drain element 0
+# [ERR][S15/S10] t=13300ns exp=13 got=0 (C-07) offset 1 (MSB=0) drain element 1
+# [ERR][S15/S10] t=13310ns exp=14 got=0 (C-07) offset 1 (MSB=0) drain element 2
+# [ERR][S15/S10] t=13320ns exp=15 got=0 (C-07) offset 1 (MSB=0) drain element 3
+# [ERR][S15/S10] t=13330ns exp=16 got=0 (C-07) offset 1 (MSB=0) drain element 4
+# [ERR][S15/S10] t=13340ns exp=17 got=0 (C-07) offset 1 (MSB=0) drain element 5
+# [ERR][S15/S10] t=13350ns exp=18 got=0 (C-07) offset 1 (MSB=0) drain element 6
+# [ERR][S15/S10] t=13360ns exp=19 got=0 (C-07) offset 1 (MSB=0) drain element 7
+# [ERR][S15/S10] t=13370ns exp=1a got=0 (C-07) offset 1 (MSB=0) drain element 8
+# [ERR][S15/S10] t=13380ns exp=1b got=0 (C-07) offset 1 (MSB=0) drain element 9
+# [ERR][S15/S10] t=13390ns exp=1c got=0 (C-07) offset 1 (MSB=0) drain element 10
+# [ERR][S15/S10] t=13400ns exp=1d got=0 (C-07) offset 1 (MSB=0) drain element 11
+# [ERR][S15/S10] t=13410ns exp=1e got=0 (C-07) offset 1 (MSB=0) drain element 12
+# [ERR][S15/S10] t=13420ns exp=1f got=0 (C-07) offset 1 (MSB=0) drain element 13
+# [ERR][S15/S10] t=13430ns exp=20 got=0 (C-07) offset 1 (MSB=0) drain element 14
+# [ERR][S15/S10] t=13440ns exp=21 got=0 (C-07) offset 1 (MSB=0) drain element 15
+# [ERR][S15/S10] t=13450ns exp=1 got=0 (S-02) offset 1 (MSB=0) empty at drain end
+# [ERR][S15/S10] t=13580ns exp=8 got=0 (S-01) advance 8: count after 8 writes
+# [ERR][S15/S10] t=13590ns exp=11 got=0 (C-07) advance 8: element 0
+# [ERR][S15/S10] t=13600ns exp=12 got=0 (C-07) advance 8: element 1
+# [ERR][S15/S10] t=13610ns exp=13 got=0 (C-07) advance 8: element 2
+# [ERR][S15/S10] t=13620ns exp=14 got=0 (C-07) advance 8: element 3
+# [ERR][S15/S10] t=13630ns exp=15 got=0 (C-07) advance 8: element 4
+# [ERR][S15/S10] t=13640ns exp=16 got=0 (C-07) advance 8: element 5
+# [ERR][S15/S10] t=13650ns exp=17 got=0 (C-07) advance 8: element 6
+# [ERR][S15/S10] t=13660ns exp=18 got=0 (C-07) advance 8: element 7
+# [ERR][S15/S10] t=13670ns exp=1 got=0 (S-02) advance 8: empty after chunk
+# [ERR][S15/S10] t=13680ns exp=1 got=0 (S-02) offset 8 (MSB=0) empty during fill
+# [ERR][S15/S10] t=13840ns exp=1 got=0 (S-02) offset 8 (MSB=0) full at fill end
+# [ERR][S15/S10] t=13840ns exp=10 got=0 (S-01) offset 8 (MSB=0) count at fill end
+# [ERR][S15/S10] t=13850ns exp=1 got=0 (S-02) offset 8 (MSB=0) full during drain
+# [ERR][S15/S10] t=13850ns exp=19 got=0 (C-07) offset 8 (MSB=0) drain element 0
+# [ERR][S15/S10] t=13860ns exp=1a got=0 (C-07) offset 8 (MSB=0) drain element 1
+# [ERR][S15/S10] t=13870ns exp=1b got=0 (C-07) offset 8 (MSB=0) drain element 2
+# [ERR][S15/S10] t=13880ns exp=1c got=0 (C-07) offset 8 (MSB=0) drain element 3
+# [ERR][S15/S10] t=13890ns exp=1d got=0 (C-07) offset 8 (MSB=0) drain element 4
+# [ERR][S15/S10] t=13900ns exp=1e got=0 (C-07) offset 8 (MSB=0) drain element 5
+# [ERR][S15/S10] t=13910ns exp=1f got=0 (C-07) offset 8 (MSB=0) drain element 6
+# [ERR][S15/S10] t=13920ns exp=20 got=0 (C-07) offset 8 (MSB=0) drain element 7
+# [ERR][S15/S10] t=13930ns exp=21 got=0 (C-07) offset 8 (MSB=0) drain element 8
+# [ERR][S15/S10] t=13940ns exp=22 got=0 (C-07) offset 8 (MSB=0) drain element 9
+# [ERR][S15/S10] t=13950ns exp=23 got=0 (C-07) offset 8 (MSB=0) drain element 10
+# [ERR][S15/S10] t=13960ns exp=24 got=0 (C-07) offset 8 (MSB=0) drain element 11
+# [ERR][S15/S10] t=13970ns exp=25 got=0 (C-07) offset 8 (MSB=0) drain element 12
+# [ERR][S15/S10] t=13980ns exp=26 got=0 (C-07) offset 8 (MSB=0) drain element 13
+# [ERR][S15/S10] t=13990ns exp=27 got=0 (C-07) offset 8 (MSB=0) drain element 14
+# [ERR][S15/S10] t=14000ns exp=28 got=0 (C-07) offset 8 (MSB=0) drain element 15
+# [ERR][S15/S10] t=14010ns exp=1 got=0 (S-02) offset 8 (MSB=0) empty at drain end
+# [ERR][S15/S10] t=14210ns exp=f got=0 (S-01) advance 15: count after 15 writes
+# [ERR][S15/S10] t=14220ns exp=11 got=0 (C-07) advance 15: element 0
+# [ERR][S15/S10] t=14230ns exp=12 got=0 (C-07) advance 15: element 1
+# [ERR][S15/S10] t=14240ns exp=13 got=0 (C-07) advance 15: element 2
+# [ERR][S15/S10] t=14250ns exp=14 got=0 (C-07) advance 15: element 3
+# [ERR][S15/S10] t=14260ns exp=15 got=0 (C-07) advance 15: element 4
+# [ERR][S15/S10] t=14270ns exp=16 got=0 (C-07) advance 15: element 5
+# [ERR][S15/S10] t=14280ns exp=17 got=0 (C-07) advance 15: element 6
+# [ERR][S15/S10] t=14290ns exp=18 got=0 (C-07) advance 15: element 7
+# [ERR][S15/S10] t=14300ns exp=19 got=0 (C-07) advance 15: element 8
+# [ERR][S15/S10] t=14310ns exp=1a got=0 (C-07) advance 15: element 9
+# [ERR][S15/S10] t=14320ns exp=1b got=0 (C-07) advance 15: element 10
+# [ERR][S15/S10] t=14330ns exp=1c got=0 (C-07) advance 15: element 11
+# [ERR][S15/S10] t=14340ns exp=1d got=0 (C-07) advance 15: element 12
+# [ERR][S15/S10] t=14350ns exp=1e got=0 (C-07) advance 15: element 13
+# [ERR][S15/S10] t=14360ns exp=1f got=0 (C-07) advance 15: element 14
+# [ERR][S15/S10] t=14370ns exp=1 got=0 (S-02) advance 15: empty after chunk
+# [ERR][S15/S10] t=14380ns exp=1 got=0 (S-02) offset 15 (MSB=0) empty during fill
+# [ERR][S15/S10] t=14540ns exp=1 got=0 (S-02) offset 15 (MSB=0) full at fill end
+# [ERR][S15/S10] t=14540ns exp=10 got=0 (S-01) offset 15 (MSB=0) count at fill end
+# [ERR][S15/S10] t=14550ns exp=1 got=0 (S-02) offset 15 (MSB=0) full during drain
+# [ERR][S15/S10] t=14550ns exp=20 got=0 (C-07) offset 15 (MSB=0) drain element 0
+# [ERR][S15/S10] t=14560ns exp=21 got=0 (C-07) offset 15 (MSB=0) drain element 1
+# [ERR][S15/S10] t=14570ns exp=22 got=0 (C-07) offset 15 (MSB=0) drain element 2
+# [ERR][S15/S10] t=14580ns exp=23 got=0 (C-07) offset 15 (MSB=0) drain element 3
+# [ERR][S15/S10] t=14590ns exp=24 got=0 (C-07) offset 15 (MSB=0) drain element 4
+# [ERR][S15/S10] t=14600ns exp=25 got=0 (C-07) offset 15 (MSB=0) drain element 5
+# [ERR][S15/S10] t=14610ns exp=26 got=0 (C-07) offset 15 (MSB=0) drain element 6
+# [ERR][S15/S10] t=14620ns exp=27 got=0 (C-07) offset 15 (MSB=0) drain element 7
+# [ERR][S15/S10] t=14630ns exp=28 got=0 (C-07) offset 15 (MSB=0) drain element 8
+# [ERR][S15/S10] t=14640ns exp=29 got=0 (C-07) offset 15 (MSB=0) drain element 9
+# [ERR][S15/S10] t=14650ns exp=2a got=0 (C-07) offset 15 (MSB=0) drain element 10
+# [ERR][S15/S10] t=14660ns exp=2b got=0 (C-07) offset 15 (MSB=0) drain element 11
+# [ERR][S15/S10] t=14670ns exp=2c got=0 (C-07) offset 15 (MSB=0) drain element 12
+# [ERR][S15/S10] t=14680ns exp=2d got=0 (C-07) offset 15 (MSB=0) drain element 13
+# [ERR][S15/S10] t=14690ns exp=2e got=0 (C-07) offset 15 (MSB=0) drain element 14
+# [ERR][S15/S10] t=14700ns exp=2f got=0 (C-07) offset 15 (MSB=0) drain element 15
+# [ERR][S15/S10] t=14710ns exp=1 got=0 (S-02) offset 15 (MSB=0) empty at drain end
+# [ERR][S15/S10] t=14920ns exp=10 got=0 (S-01) advance 17: count after 16 writes
+# [ERR][S15/S10] t=14930ns exp=11 got=0 (C-07) advance 17: element 0
+# [ERR][S15/S10] t=14940ns exp=12 got=0 (C-07) advance 17: element 1
+# [ERR][S15/S10] t=14950ns exp=13 got=0 (C-07) advance 17: element 2
+# [ERR][S15/S10] t=14960ns exp=14 got=0 (C-07) advance 17: element 3
+# [ERR][S15/S10] t=14970ns exp=15 got=0 (C-07) advance 17: element 4
+# [ERR][S15/S10] t=14980ns exp=16 got=0 (C-07) advance 17: element 5
+# [ERR][S15/S10] t=14990ns exp=17 got=0 (C-07) advance 17: element 6
+# [ERR][S15/S10] t=15000ns exp=18 got=0 (C-07) advance 17: element 7
+# [ERR][S15/S10] t=15010ns exp=19 got=0 (C-07) advance 17: element 8
+# [ERR][S15/S10] t=15020ns exp=1a got=0 (C-07) advance 17: element 9
+# [ERR][S15/S10] t=15030ns exp=1b got=0 (C-07) advance 17: element 10
+# [ERR][S15/S10] t=15040ns exp=1c got=0 (C-07) advance 17: element 11
+# [ERR][S15/S10] t=15050ns exp=1d got=0 (C-07) advance 17: element 12
+# [ERR][S15/S10] t=15060ns exp=1e got=0 (C-07) advance 17: element 13
+# [ERR][S15/S10] t=15070ns exp=1f got=0 (C-07) advance 17: element 14
+# [ERR][S15/S10] t=15080ns exp=20 got=0 (C-07) advance 17: element 15
+# [ERR][S15/S10] t=15090ns exp=1 got=0 (S-02) advance 17: empty after chunk
+# [ERR][S15/S10] t=15110ns exp=1 got=0 (S-01) advance 17: count after 1 writes
+# [ERR][S15/S10] t=15120ns exp=21 got=0 (C-07) advance 17: element 0
+# [ERR][S15/S10] t=15130ns exp=1 got=0 (S-02) advance 17: empty after chunk
+# [ERR][S15/S10] t=15140ns exp=1 got=0 (S-02) offset 17 (MSB=1) empty during fill
+# [ERR][S15/S10] t=15300ns exp=1 got=0 (S-02) offset 17 (MSB=1) full at fill end
+# [ERR][S15/S10] t=15300ns exp=10 got=0 (S-01) offset 17 (MSB=1) count at fill end
+# [ERR][S15/S10] t=15310ns exp=1 got=0 (S-02) offset 17 (MSB=1) full during drain
+# [ERR][S15/S10] t=15310ns exp=22 got=0 (C-07) offset 17 (MSB=1) drain element 0
+# [ERR][S15/S10] t=15320ns exp=23 got=0 (C-07) offset 17 (MSB=1) drain element 1
+# [ERR][S15/S10] t=15330ns exp=24 got=0 (C-07) offset 17 (MSB=1) drain element 2
+# [ERR][S15/S10] t=15340ns exp=25 got=0 (C-07) offset 17 (MSB=1) drain element 3
+# [ERR][S15/S10] t=15350ns exp=26 got=0 (C-07) offset 17 (MSB=1) drain element 4
+# [ERR][S15/S10] t=15360ns exp=27 got=0 (C-07) offset 17 (MSB=1) drain element 5
+# [ERR][S15/S10] t=15370ns exp=28 got=0 (C-07) offset 17 (MSB=1) drain element 6
+# [ERR][S15/S10] t=15380ns exp=29 got=0 (C-07) offset 17 (MSB=1) drain element 7
+# [ERR][S15/S10] t=15390ns exp=2a got=0 (C-07) offset 17 (MSB=1) drain element 8
+# [ERR][S15/S10] t=15400ns exp=2b got=0 (C-07) offset 17 (MSB=1) drain element 9
+# [ERR][S15/S10] t=15410ns exp=2c got=0 (C-07) offset 17 (MSB=1) drain element 10
+# [ERR][S15/S10] t=15420ns exp=2d got=0 (C-07) offset 17 (MSB=1) drain element 11
+# [ERR][S15/S10] t=15430ns exp=2e got=0 (C-07) offset 17 (MSB=1) drain element 12
+# [ERR][S15/S10] t=15440ns exp=2f got=0 (C-07) offset 17 (MSB=1) drain element 13
+# [ERR][S15/S10] t=15450ns exp=30 got=0 (C-07) offset 17 (MSB=1) drain element 14
+# [ERR][S15/S10] t=15460ns exp=31 got=0 (C-07) offset 17 (MSB=1) drain element 15
+# [ERR][S15/S10] t=15470ns exp=1 got=0 (S-02) offset 17 (MSB=1) empty at drain end
+# [ERR][S15/S10] t=15680ns exp=10 got=0 (S-01) advance 24: count after 16 writes
+# [ERR][S15/S10] t=15690ns exp=11 got=0 (C-07) advance 24: element 0
+# [ERR][S15/S10] t=15700ns exp=12 got=0 (C-07) advance 24: element 1
+# [ERR][S15/S10] t=15710ns exp=13 got=0 (C-07) advance 24: element 2
+# [ERR][S15/S10] t=15720ns exp=14 got=0 (C-07) advance 24: element 3
+# [ERR][S15/S10] t=15730ns exp=15 got=0 (C-07) advance 24: element 4
+# [ERR][S15/S10] t=15740ns exp=16 got=0 (C-07) advance 24: element 5
+# [ERR][S15/S10] t=15750ns exp=17 got=0 (C-07) advance 24: element 6
+# [ERR][S15/S10] t=15760ns exp=18 got=0 (C-07) advance 24: element 7
+# [ERR][S15/S10] t=15770ns exp=19 got=0 (C-07) advance 24: element 8
+# [ERR][S15/S10] t=15780ns exp=1a got=0 (C-07) advance 24: element 9
+# [ERR][S15/S10] t=15790ns exp=1b got=0 (C-07) advance 24: element 10
+# [ERR][S15/S10] t=15800ns exp=1c got=0 (C-07) advance 24: element 11
+# [ERR][S15/S10] t=15810ns exp=1d got=0 (C-07) advance 24: element 12
+# [ERR][S15/S10] t=15820ns exp=1e got=0 (C-07) advance 24: element 13
+# [ERR][S15/S10] t=15830ns exp=1f got=0 (C-07) advance 24: element 14
+# [ERR][S15/S10] t=15840ns exp=20 got=0 (C-07) advance 24: element 15
+# [ERR][S15/S10] t=15850ns exp=1 got=0 (S-02) advance 24: empty after chunk
+# [ERR][S15/S10] t=15940ns exp=8 got=0 (S-01) advance 24: count after 8 writes
+# [ERR][S15/S10] t=15950ns exp=21 got=0 (C-07) advance 24: element 0
+# [ERR][S15/S10] t=15960ns exp=22 got=0 (C-07) advance 24: element 1
+# [ERR][S15/S10] t=15970ns exp=23 got=0 (C-07) advance 24: element 2
+# [ERR][S15/S10] t=15980ns exp=24 got=0 (C-07) advance 24: element 3
+# [ERR][S15/S10] t=15990ns exp=25 got=0 (C-07) advance 24: element 4
+# [ERR][S15/S10] t=16000ns exp=26 got=0 (C-07) advance 24: element 5
+# [ERR][S15/S10] t=16010ns exp=27 got=0 (C-07) advance 24: element 6
+# [ERR][S15/S10] t=16020ns exp=28 got=0 (C-07) advance 24: element 7
+# [ERR][S15/S10] t=16030ns exp=1 got=0 (S-02) advance 24: empty after chunk
+# [ERR][S15/S10] t=16040ns exp=1 got=0 (S-02) offset 24 (MSB=1) empty during fill
+# [ERR][S15/S10] t=16200ns exp=1 got=0 (S-02) offset 24 (MSB=1) full at fill end
+# [ERR][S15/S10] t=16200ns exp=10 got=0 (S-01) offset 24 (MSB=1) count at fill end
+# [ERR][S15/S10] t=16210ns exp=1 got=0 (S-02) offset 24 (MSB=1) full during drain
+# [ERR][S15/S10] t=16210ns exp=29 got=0 (C-07) offset 24 (MSB=1) drain element 0
+# [ERR][S15/S10] t=16220ns exp=2a got=0 (C-07) offset 24 (MSB=1) drain element 1
+# [ERR][S15/S10] t=16230ns exp=2b got=0 (C-07) offset 24 (MSB=1) drain element 2
+# [ERR][S15/S10] t=16240ns exp=2c got=0 (C-07) offset 24 (MSB=1) drain element 3
+# [ERR][S15/S10] t=16250ns exp=2d got=0 (C-07) offset 24 (MSB=1) drain element 4
+# [ERR][S15/S10] t=16260ns exp=2e got=0 (C-07) offset 24 (MSB=1) drain element 5
+# [ERR][S15/S10] t=16270ns exp=2f got=0 (C-07) offset 24 (MSB=1) drain element 6
+# [ERR][S15/S10] t=16280ns exp=30 got=0 (C-07) offset 24 (MSB=1) drain element 7
+# [ERR][S15/S10] t=16290ns exp=31 got=0 (C-07) offset 24 (MSB=1) drain element 8
+# [ERR][S15/S10] t=16300ns exp=32 got=0 (C-07) offset 24 (MSB=1) drain element 9
+# [ERR][S15/S10] t=16310ns exp=33 got=0 (C-07) offset 24 (MSB=1) drain element 10
+# [ERR][S15/S10] t=16320ns exp=34 got=0 (C-07) offset 24 (MSB=1) drain element 11
+# [ERR][S15/S10] t=16330ns exp=35 got=0 (C-07) offset 24 (MSB=1) drain element 12
+# [ERR][S15/S10] t=16340ns exp=36 got=0 (C-07) offset 24 (MSB=1) drain element 13
+# [ERR][S15/S10] t=16350ns exp=37 got=0 (C-07) offset 24 (MSB=1) drain element 14
+# [ERR][S15/S10] t=16360ns exp=38 got=0 (C-07) offset 24 (MSB=1) drain element 15
+# [ERR][S15/S10] t=16370ns exp=1 got=0 (S-02) offset 24 (MSB=1) empty at drain end
+# [ERR][S15/S10] t=16580ns exp=10 got=0 (S-01) advance 31: count after 16 writes
+# [ERR][S15/S10] t=16590ns exp=11 got=0 (C-07) advance 31: element 0
+# [ERR][S15/S10] t=16600ns exp=12 got=0 (C-07) advance 31: element 1
+# [ERR][S15/S10] t=16610ns exp=13 got=0 (C-07) advance 31: element 2
+# [ERR][S15/S10] t=16620ns exp=14 got=0 (C-07) advance 31: element 3
+# [ERR][S15/S10] t=16630ns exp=15 got=0 (C-07) advance 31: element 4
+# [ERR][S15/S10] t=16640ns exp=16 got=0 (C-07) advance 31: element 5
+# [ERR][S15/S10] t=16650ns exp=17 got=0 (C-07) advance 31: element 6
+# [ERR][S15/S10] t=16660ns exp=18 got=0 (C-07) advance 31: element 7
+# [ERR][S15/S10] t=16670ns exp=19 got=0 (C-07) advance 31: element 8
+# [ERR][S15/S10] t=16680ns exp=1a got=0 (C-07) advance 31: element 9
+# [ERR][S15/S10] t=16690ns exp=1b got=0 (C-07) advance 31: element 10
+# [ERR][S15/S10] t=16700ns exp=1c got=0 (C-07) advance 31: element 11
+# [ERR][S15/S10] t=16710ns exp=1d got=0 (C-07) advance 31: element 12
+# [ERR][S15/S10] t=16720ns exp=1e got=0 (C-07) advance 31: element 13
+# [ERR][S15/S10] t=16730ns exp=1f got=0 (C-07) advance 31: element 14
+# [ERR][S15/S10] t=16740ns exp=20 got=0 (C-07) advance 31: element 15
+# [ERR][S15/S10] t=16750ns exp=1 got=0 (S-02) advance 31: empty after chunk
+# [ERR][S15/S10] t=16910ns exp=f got=0 (S-01) advance 31: count after 15 writes
+# [ERR][S15/S10] t=16920ns exp=21 got=0 (C-07) advance 31: element 0
+# [ERR][S15/S10] t=16930ns exp=22 got=0 (C-07) advance 31: element 1
+# [ERR][S15/S10] t=16940ns exp=23 got=0 (C-07) advance 31: element 2
+# [ERR][S15/S10] t=16950ns exp=24 got=0 (C-07) advance 31: element 3
+# [ERR][S15/S10] t=16960ns exp=25 got=0 (C-07) advance 31: element 4
+# [ERR][S15/S10] t=16970ns exp=26 got=0 (C-07) advance 31: element 5
+# [ERR][S15/S10] t=16980ns exp=27 got=0 (C-07) advance 31: element 6
+# [ERR][S15/S10] t=16990ns exp=28 got=0 (C-07) advance 31: element 7
+# [ERR][S15/S10] t=17000ns exp=29 got=0 (C-07) advance 31: element 8
+# [ERR][S15/S10] t=17010ns exp=2a got=0 (C-07) advance 31: element 9
+# [ERR][S15/S10] t=17020ns exp=2b got=0 (C-07) advance 31: element 10
+# [ERR][S15/S10] t=17030ns exp=2c got=0 (C-07) advance 31: element 11
+# [ERR][S15/S10] t=17040ns exp=2d got=0 (C-07) advance 31: element 12
+# [ERR][S15/S10] t=17050ns exp=2e got=0 (C-07) advance 31: element 13
+# [ERR][S15/S10] t=17060ns exp=2f got=0 (C-07) advance 31: element 14
+# [ERR][S15/S10] t=17070ns exp=1 got=0 (S-02) advance 31: empty after chunk
+# [ERR][S15/S10] t=17080ns exp=1 got=0 (S-02) offset 31 (MSB=1) empty during fill
+# [ERR][S15/S10] t=17240ns exp=1 got=0 (S-02) offset 31 (MSB=1) full at fill end
+# [ERR][S15/S10] t=17240ns exp=10 got=0 (S-01) offset 31 (MSB=1) count at fill end
+# [ERR][S15/S10] t=17250ns exp=1 got=0 (S-02) offset 31 (MSB=1) full during drain
+# [ERR][S15/S10] t=17250ns exp=30 got=0 (C-07) offset 31 (MSB=1) drain element 0
+# [ERR][S15/S10] t=17260ns exp=31 got=0 (C-07) offset 31 (MSB=1) drain element 1
+# [ERR][S15/S10] t=17270ns exp=32 got=0 (C-07) offset 31 (MSB=1) drain element 2
+# [ERR][S15/S10] t=17280ns exp=33 got=0 (C-07) offset 31 (MSB=1) drain element 3
+# [ERR][S15/S10] t=17290ns exp=34 got=0 (C-07) offset 31 (MSB=1) drain element 4
+# [ERR][S15/S10] t=17300ns exp=35 got=0 (C-07) offset 31 (MSB=1) drain element 5
+# [ERR][S15/S10] t=17310ns exp=36 got=0 (C-07) offset 31 (MSB=1) drain element 6
+# [ERR][S15/S10] t=17320ns exp=37 got=0 (C-07) offset 31 (MSB=1) drain element 7
+# [ERR][S15/S10] t=17330ns exp=38 got=0 (C-07) offset 31 (MSB=1) drain element 8
+# [ERR][S15/S10] t=17340ns exp=39 got=0 (C-07) offset 31 (MSB=1) drain element 9
+# [ERR][S15/S10] t=17350ns exp=3a got=0 (C-07) offset 31 (MSB=1) drain element 10
+# [ERR][S15/S10] t=17360ns exp=3b got=0 (C-07) offset 31 (MSB=1) drain element 11
+# [ERR][S15/S10] t=17370ns exp=3c got=0 (C-07) offset 31 (MSB=1) drain element 12
+# [ERR][S15/S10] t=17380ns exp=3d got=0 (C-07) offset 31 (MSB=1) drain element 13
+# [ERR][S15/S10] t=17390ns exp=3e got=0 (C-07) offset 31 (MSB=1) drain element 14
+# [ERR][S15/S10] t=17400ns exp=3f got=0 (C-07) offset 31 (MSB=1) drain element 15
+# [ERR][S15/S10] t=17410ns exp=1 got=0 (S-02) offset 31 (MSB=1) empty at drain end
+# [ERR][S15/S11] t=17620ns exp=1 got=0 (S-02) full before mid-run reset
+# [ERR][S15/S11] t=17650ns exp=1 got=0 (C-05) empty after mid-run reset
+# [ERR][S15/S11] t=17740ns exp=8 got=0 (C-05) count = new writes only
+# [ERR][S15/S11] t=17750ns exp=c1 got=0 (C-05) new data only, element 0
+# [ERR][S15/S11] t=17760ns exp=c2 got=0 (C-05) new data only, element 1
+# [ERR][S15/S11] t=17770ns exp=c3 got=0 (C-05) new data only, element 2
+# [ERR][S15/S11] t=17780ns exp=c4 got=0 (C-05) new data only, element 3
+# [ERR][S15/S11] t=17790ns exp=c5 got=0 (C-05) new data only, element 4
+# [ERR][S15/S11] t=17800ns exp=c6 got=0 (C-05) new data only, element 5
+# [ERR][S15/S11] t=17810ns exp=c7 got=0 (C-05) new data only, element 6
+# [ERR][S15/S11] t=17820ns exp=c8 got=0 (C-05) new data only, element 7
+# [ERR][S15/S11] t=17830ns exp=1 got=0 (C-05) empty after new data read (no old data left)
+# [ERR][S15/S12] t=18040ns exp=10 got=0 (S-04) count after pattern batch
+# [ERR][S15/S12] t=18060ns exp=ffffffff got=0 (C-07) pattern ffffffff
+# [ERR][S15/S12] t=18070ns exp=55555555 got=0 (C-07) pattern 55555555
+# [ERR][S15/S12] t=18080ns exp=aaaaaaaa got=0 (C-07) pattern aaaaaaaa
+# [ERR][S15/S12] t=18090ns exp=1 got=0 (C-07) pattern 1
+# [ERR][S15/S12] t=18100ns exp=2 got=0 (C-07) pattern 2
+# [ERR][S15/S12] t=18110ns exp=4 got=0 (C-07) pattern 4
+# [ERR][S15/S12] t=18120ns exp=8 got=0 (C-07) pattern 8
+# [ERR][S15/S12] t=18130ns exp=10 got=0 (C-07) pattern 10
+# [ERR][S15/S12] t=18140ns exp=20 got=0 (C-07) pattern 20
+# [ERR][S15/S12] t=18150ns exp=40 got=0 (C-07) pattern 40
+# [ERR][S15/S12] t=18160ns exp=80 got=0 (C-07) pattern 80
+# [ERR][S15/S12] t=18170ns exp=100 got=0 (C-07) pattern 100
+# [ERR][S15/S12] t=18180ns exp=200 got=0 (C-07) pattern 200
+# [ERR][S15/S12] t=18190ns exp=400 got=0 (C-07) pattern 400
+# [ERR][S15/S12] t=18200ns exp=800 got=0 (C-07) pattern 800
+# [ERR][S15/S12] t=18210ns exp=1 got=0 (S-02) empty after pattern batch
+# [ERR][S15/S12] t=18380ns exp=10 got=0 (S-04) count after pattern batch
+# [ERR][S15/S12] t=18390ns exp=1000 got=0 (C-07) pattern 1000
+# [ERR][S15/S12] t=18400ns exp=2000 got=0 (C-07) pattern 2000
+# [ERR][S15/S12] t=18410ns exp=4000 got=0 (C-07) pattern 4000
+# [ERR][S15/S12] t=18420ns exp=8000 got=0 (C-07) pattern 8000
+# [ERR][S15/S12] t=18430ns exp=10000 got=0 (C-07) pattern 10000
+# [ERR][S15/S12] t=18440ns exp=20000 got=0 (C-07) pattern 20000
+# [ERR][S15/S12] t=18450ns exp=40000 got=0 (C-07) pattern 40000
+# [ERR][S15/S12] t=18460ns exp=80000 got=0 (C-07) pattern 80000
+# [ERR][S15/S12] t=18470ns exp=100000 got=0 (C-07) pattern 100000
+# [ERR][S15/S12] t=18480ns exp=200000 got=0 (C-07) pattern 200000
+# [ERR][S15/S12] t=18490ns exp=400000 got=0 (C-07) pattern 400000
+# [ERR][S15/S12] t=18500ns exp=800000 got=0 (C-07) pattern 800000
+# [ERR][S15/S12] t=18510ns exp=1000000 got=0 (C-07) pattern 1000000
+# [ERR][S15/S12] t=18520ns exp=2000000 got=0 (C-07) pattern 2000000
+# [ERR][S15/S12] t=18530ns exp=4000000 got=0 (C-07) pattern 4000000
+# [ERR][S15/S12] t=18540ns exp=8000000 got=0 (C-07) pattern 8000000
+# [ERR][S15/S12] t=18550ns exp=1 got=0 (S-02) empty after pattern batch
+# [ERR][S15/S12] t=18600ns exp=4 got=0 (S-04) count after pattern batch
+# [ERR][S15/S12] t=18610ns exp=10000000 got=0 (C-07) pattern 10000000
+# [ERR][S15/S12] t=18620ns exp=20000000 got=0 (C-07) pattern 20000000
+# [ERR][S15/S12] t=18630ns exp=40000000 got=0 (C-07) pattern 40000000
+# [ERR][S15/S12] t=18640ns exp=80000000 got=0 (C-07) pattern 80000000
+# [ERR][S15/S12] t=18650ns exp=1 got=0 (S-02) empty after pattern batch
+# [ERR][S15/S13] t=18710ns exp=1 got=0 (S-04) count during write burst, cycle 1
+# [ERR][S15/S13] t=18720ns exp=2 got=0 (S-04) count during write burst, cycle 2
+# [ERR][S15/S13] t=18730ns exp=3 got=0 (S-04) count during write burst, cycle 3
+# [ERR][S15/S13] t=18740ns exp=4 got=0 (S-04) count during write burst, cycle 4
+# [ERR][S15/S13] t=18750ns exp=5 got=0 (S-04) count during write burst, cycle 5
+# [ERR][S15/S13] t=18760ns exp=6 got=0 (S-04) count during write burst, cycle 6
+# [ERR][S15/S13] t=18770ns exp=7 got=0 (S-04) count during write burst, cycle 7
+# [ERR][S15/S13] t=18780ns exp=8 got=0 (S-04) count during write burst, cycle 8
+# [ERR][S15/S13] t=18790ns exp=9 got=0 (S-04) count during write burst, cycle 9
+# [ERR][S15/S13] t=18800ns exp=a got=0 (S-04) count during write burst, cycle 10
+# [ERR][S15/S13] t=18810ns exp=b got=0 (S-04) count during write burst, cycle 11
+# [ERR][S15/S13] t=18820ns exp=c got=0 (S-04) count during write burst, cycle 12
+# [ERR][S15/S13] t=18830ns exp=d got=0 (S-04) count during write burst, cycle 13
+# [ERR][S15/S13] t=18840ns exp=e got=0 (S-04) count during write burst, cycle 14
+# [ERR][S15/S13] t=18850ns exp=f got=0 (S-04) count during write burst, cycle 15
+# [ERR][S15/S13] t=18860ns exp=1 got=0 (S-02) full after write burst
+# [ERR][S15/S13] t=18860ns exp=10 got=0 (S-04) count after write burst
+# [ERR][S15/S13] t=18870ns exp=10 got=0 (S-04) count during read burst, cycle 0
+# [ERR][S15/S13] t=18870ns exp=d1 got=0 (C-07) burst element 0
+# [ERR][S15/S13] t=18880ns exp=f got=0 (S-04) count during read burst, cycle 1
+# [ERR][S15/S13] t=18880ns exp=d2 got=0 (C-07) burst element 1
+# [ERR][S15/S13] t=18890ns exp=e got=0 (S-04) count during read burst, cycle 2
+# [ERR][S15/S13] t=18890ns exp=d3 got=0 (C-07) burst element 2
+# [ERR][S15/S13] t=18900ns exp=d got=0 (S-04) count during read burst, cycle 3
+# [ERR][S15/S13] t=18900ns exp=d4 got=0 (C-07) burst element 3
+# [ERR][S15/S13] t=18910ns exp=c got=0 (S-04) count during read burst, cycle 4
+# [ERR][S15/S13] t=18910ns exp=d5 got=0 (C-07) burst element 4
+# [ERR][S15/S13] t=18920ns exp=b got=0 (S-04) count during read burst, cycle 5
+# [ERR][S15/S13] t=18920ns exp=d6 got=0 (C-07) burst element 5
+# [ERR][S15/S13] t=18930ns exp=a got=0 (S-04) count during read burst, cycle 6
+# [ERR][S15/S13] t=18930ns exp=d7 got=0 (C-07) burst element 6
+# [ERR][S15/S13] t=18940ns exp=9 got=0 (S-04) count during read burst, cycle 7
+# [ERR][S15/S13] t=18940ns exp=d8 got=0 (C-07) burst element 7
+# [ERR][S15/S13] t=18950ns exp=8 got=0 (S-04) count during read burst, cycle 8
+# [ERR][S15/S13] t=18950ns exp=d9 got=0 (C-07) burst element 8
+# [ERR][S15/S13] t=18960ns exp=7 got=0 (S-04) count during read burst, cycle 9
+# [ERR][S15/S13] t=18960ns exp=da got=0 (C-07) burst element 9
+# [ERR][S15/S13] t=18970ns exp=6 got=0 (S-04) count during read burst, cycle 10
+# [ERR][S15/S13] t=18970ns exp=db got=0 (C-07) burst element 10
+# [ERR][S15/S13] t=18980ns exp=5 got=0 (S-04) count during read burst, cycle 11
+# [ERR][S15/S13] t=18980ns exp=dc got=0 (C-07) burst element 11
+# [ERR][S15/S13] t=18990ns exp=4 got=0 (S-04) count during read burst, cycle 12
+# [ERR][S15/S13] t=18990ns exp=dd got=0 (C-07) burst element 12
+# [ERR][S15/S13] t=19000ns exp=3 got=0 (S-04) count during read burst, cycle 13
+# [ERR][S15/S13] t=19000ns exp=de got=0 (C-07) burst element 13
+# [ERR][S15/S13] t=19010ns exp=2 got=0 (S-04) count during read burst, cycle 14
+# [ERR][S15/S13] t=19010ns exp=df got=0 (C-07) burst element 14
+# [ERR][S15/S13] t=19020ns exp=1 got=0 (S-04) count during read burst, cycle 15
+# [ERR][S15/S13] t=19020ns exp=e0 got=0 (C-07) burst element 15
+# [ERR][S15/S13] t=19030ns exp=1 got=0 (S-02) empty after read burst
+# INFO S15 checks=2267 errors=568
+# TEST S15 FAIL
+# [ERR][S16] t=19090ns exp=1 got=0 (S-04) count during fill, cycle 1
+# [ERR][S16] t=19100ns exp=2 got=0 (S-04) count during fill, cycle 2
+# [ERR][S16] t=19110ns exp=3 got=0 (S-04) count during fill, cycle 3
+# [ERR][S16] t=19120ns exp=4 got=0 (S-04) count during fill, cycle 4
+# [ERR][S16] t=19130ns exp=5 got=0 (S-04) count during fill, cycle 5
+# [ERR][S16] t=19140ns exp=6 got=0 (S-04) count during fill, cycle 6
+# [ERR][S16] t=19150ns exp=7 got=0 (S-04) count during fill, cycle 7
+# [ERR][S16] t=19160ns exp=8 got=0 (S-04) count during fill, cycle 8
+# [ERR][S16] t=19170ns exp=9 got=0 (S-04) count during fill, cycle 9
+# [ERR][S16] t=19180ns exp=a got=0 (S-04) count during fill, cycle 10
+# [ERR][S16] t=19190ns exp=b got=0 (S-04) count during fill, cycle 11
+# [ERR][S16] t=19200ns exp=c got=0 (S-04) count during fill, cycle 12
+# [ERR][S16] t=19210ns exp=d got=0 (S-04) count during fill, cycle 13
+# [ERR][S16] t=19220ns exp=e got=0 (S-04) count during fill, cycle 14
+# [ERR][S16] t=19230ns exp=f got=0 (S-04) count during fill, cycle 15
+# [ERR][S16] t=19240ns exp=10 got=0 (S-01) count=DEPTH at full
+# [ERR][S16] t=19250ns exp=10 got=0 (S-04) count during drain, cycle 0
+# [ERR][S16] t=19260ns exp=f got=0 (S-04) count during drain, cycle 1
+# [ERR][S16] t=19270ns exp=e got=0 (S-04) count during drain, cycle 2
+# [ERR][S16] t=19280ns exp=d got=0 (S-04) count during drain, cycle 3
+# [ERR][S16] t=19290ns exp=c got=0 (S-04) count during drain, cycle 4
+# [ERR][S16] t=19300ns exp=b got=0 (S-04) count during drain, cycle 5
+# [ERR][S16] t=19310ns exp=a got=0 (S-04) count during drain, cycle 6
+# [ERR][S16] t=19320ns exp=9 got=0 (S-04) count during drain, cycle 7
+# [ERR][S16] t=19330ns exp=8 got=0 (S-04) count during drain, cycle 8
+# [ERR][S16] t=19340ns exp=7 got=0 (S-04) count during drain, cycle 9
+# [ERR][S16] t=19350ns exp=6 got=0 (S-04) count during drain, cycle 10
+# [ERR][S16] t=19360ns exp=5 got=0 (S-04) count during drain, cycle 11
+# [ERR][S16] t=19370ns exp=4 got=0 (S-04) count during drain, cycle 12
+# [ERR][S16] t=19380ns exp=3 got=0 (S-04) count during drain, cycle 13
+# [ERR][S16] t=19390ns exp=2 got=0 (S-04) count during drain, cycle 14
+# [ERR][S16] t=19400ns exp=1 got=0 (S-04) count during drain, cycle 15
+# [ERR][S16] t=19430ns exp=1 got=0 (S-04) count during half fill, cycle 1
+# [ERR][S16] t=19440ns exp=2 got=0 (S-04) count during half fill, cycle 2
+# [ERR][S16] t=19450ns exp=3 got=0 (S-04) count during half fill, cycle 3
+# [ERR][S16] t=19460ns exp=4 got=0 (S-04) count during half fill, cycle 4
+# [ERR][S16] t=19470ns exp=5 got=0 (S-04) count during half fill, cycle 5
+# [ERR][S16] t=19480ns exp=6 got=0 (S-04) count during half fill, cycle 6
+# [ERR][S16] t=19490ns exp=7 got=0 (S-04) count during half fill, cycle 7
+# [ERR][S16] t=19500ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 0
+# [ERR][S16] t=19510ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 1
+# [ERR][S16] t=19520ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 2
+# [ERR][S16] t=19530ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 3
+# [ERR][S16] t=19540ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 4
+# [ERR][S16] t=19550ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 5
+# [ERR][S16] t=19560ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 6
+# [ERR][S16] t=19570ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 7
+# [ERR][S16] t=19580ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 8
+# [ERR][S16] t=19590ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 9
+# [ERR][S16] t=19600ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 10
+# [ERR][S16] t=19610ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 11
+# [ERR][S16] t=19620ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 12
+# [ERR][S16] t=19630ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 13
+# [ERR][S16] t=19640ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 14
+# [ERR][S16] t=19650ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 15
+# [ERR][S16] t=19660ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 16
+# [ERR][S16] t=19670ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 17
+# [ERR][S16] t=19680ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 18
+# [ERR][S16] t=19690ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 19
+# [ERR][S16] t=19700ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 20
+# [ERR][S16] t=19710ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 21
+# [ERR][S16] t=19720ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 22
+# [ERR][S16] t=19730ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 23
+# [ERR][S16] t=19740ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 24
+# [ERR][S16] t=19750ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 25
+# [ERR][S16] t=19760ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 26
+# [ERR][S16] t=19770ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 27
+# [ERR][S16] t=19780ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 28
+# [ERR][S16] t=19790ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 29
+# [ERR][S16] t=19800ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 30
+# [ERR][S16] t=19810ns exp=8 got=0 (S-04) count during simultaneous R/W, cycle 31
+# [ERR][S16] t=19820ns exp=8 got=0 (S-04) count after simultaneous R/W
+# INFO S16 checks=150 errors=72
+# TEST S16 FAIL
+# [ERR][S17] t=19870ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 0 cycle 0
+# [ERR][S17] t=19880ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 0 cycle 1
+# [ERR][S17] t=19890ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 0 cycle 2
+# [ERR][S17] t=19900ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 1 cycle 0
+# [ERR][S17] t=19910ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 1 cycle 1
+# [ERR][S17] t=19920ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 1 cycle 2
+# [ERR][S17] t=19930ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 2 cycle 0
+# [ERR][S17] t=19940ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 2 cycle 1
+# [ERR][S17] t=19950ns exp=1 got=0 (C-08) empty stays 1 in reset, phase 2 cycle 2
+# [ERR][S17] t=19960ns exp=1 got=0 (C-08) empty after release
+# [ERR][S17] t=19970ns exp=1 got=0 (C-08) empty 1 cycle after release
+# [ERR][S17] t=19990ns exp=1 got=0 (C-08) count=1 after first write post-release
+# [ERR][S17] t=19990ns exp=17a got=0 (C-01) head after first write post-release
+# [ERR][S17] t=20010ns exp=1 got=0 (C-08) empty after round trip post-release
+# INFO S17 checks=63 errors=14
+# TEST S17 FAIL
+# TB FAIL (1243 errors)
+# ** Note: $finish    : p1/tb/tb_sync_fifo.sv(674)
+#    Time: 20010 ns  Iteration: 1  Instance: /tb_sync_fifo
+# End time: 19:41:05 on Oct 17,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

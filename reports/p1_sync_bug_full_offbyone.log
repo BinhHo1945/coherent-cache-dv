@@ -1,0 +1,211 @@
+Reading pref.tcl
+
+# 2025.2
+
+# ** Note: (vsim-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -c -work D:/Projects/HW/coherent-cache-dv/work/p1 -coverage tb_sync_fifo -do "run -all; coverage save -onexit /d/Projects/HW/coherent-cache-dv/work/p1/cov.ucdb; quit -f" 
+# Start time: 21:16:40 on Oct 17,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_sync_fifo(fast)
+# run -all
+# INFO tb_sync_fifo DEPTH=16 DATA_WIDTH=32
+# INFO S1 checks=8 errors=0
+# TEST S1 PASS
+# INFO S2 checks=14 errors=0
+# TEST S2 PASS
+# [ERR][S3] t=330ns exp=0 got=1 (S-02) full=0 with DEPTH-1 stored
+# [ERR][S3] t=340ns exp=10 got=f (S-04) count after DEPTH writes
+# [ERR][S3] t=340ns exp=0 got=1 (C-04) no overflow on accepted writes
+# INFO S3 checks=23 errors=3
+# TEST S3 FAIL
+# [ERR][S4] t=710ns exp=0 got=1 (C-01) empty=0 before pop 15
+# [ERR][S4] t=720ns exp=0 got=1 (C-04) no underflow on accepted reads
+# INFO S4 checks=69 errors=2
+# TEST S4 FAIL
+# [ERR][S5] t=950ns exp=10 got=f (C-03) count unchanged after rejected write
+# [ERR][S5] t=1000ns exp=10 got=f (C-03) count unchanged after 3 rejected writes
+# [ERR][S5] t=1160ns exp=0 got=1 (C-01) empty=0 before pop 15
+# INFO S5 checks=84 errors=3
+# TEST S5 FAIL
+# INFO S6 checks=27 errors=0
+# TEST S6 PASS
+# INFO S7 checks=190 errors=0
+# TEST S7 PASS
+# INFO S8 checks=14 errors=0
+# TEST S8 PASS
+# [ERR][S9] t=2180ns exp=f got=e (S-03) count=DEPTH-1
+# INFO S9 checks=58 errors=1
+# TEST S9 FAIL
+# [ERR][S10] t=2550ns exp=0 got=1 (S-02) lap 0 full during fill
+# [ERR][S10] t=2560ns exp=10 got=f (S-01) lap 0 count at fill end
+# [ERR][S10] t=2720ns exp=0 got=1 (S-02) lap 0 empty during drain
+# [ERR][S10] t=2890ns exp=0 got=1 (S-02) lap 1 full during fill
+# [ERR][S10] t=2900ns exp=10 got=f (S-01) lap 1 count at fill end
+# [ERR][S10] t=3060ns exp=0 got=1 (S-02) lap 1 empty during drain
+# [ERR][S10] t=3230ns exp=0 got=1 (S-02) lap 2 full during fill
+# [ERR][S10] t=3240ns exp=10 got=f (S-01) lap 2 count at fill end
+# [ERR][S10] t=3400ns exp=0 got=1 (S-02) lap 2 empty during drain
+# [ERR][S10] t=3650ns exp=0 got=1 (S-02) offset 1 (MSB=0) full during fill
+# [ERR][S10] t=3660ns exp=10 got=f (S-01) offset 1 (MSB=0) count at fill end
+# [ERR][S10] t=3820ns exp=0 got=1 (S-02) offset 1 (MSB=0) empty during drain
+# [ERR][S10] t=4210ns exp=0 got=1 (S-02) offset 8 (MSB=0) full during fill
+# [ERR][S10] t=4220ns exp=10 got=f (S-01) offset 8 (MSB=0) count at fill end
+# [ERR][S10] t=4380ns exp=0 got=1 (S-02) offset 8 (MSB=0) empty during drain
+# [ERR][S10] t=4910ns exp=0 got=1 (S-02) offset 15 (MSB=0) full during fill
+# [ERR][S10] t=4920ns exp=10 got=f (S-01) offset 15 (MSB=0) count at fill end
+# [ERR][S10] t=5080ns exp=0 got=1 (S-02) offset 15 (MSB=0) empty during drain
+# [ERR][S10] t=5300ns exp=10 got=f (S-01) advance 17: count after 16 writes
+# [ERR][S10] t=5670ns exp=0 got=1 (S-02) offset 17 (MSB=1) full during fill
+# [ERR][S10] t=5680ns exp=10 got=f (S-01) offset 17 (MSB=1) count at fill end
+# [ERR][S10] t=5840ns exp=0 got=1 (S-02) offset 17 (MSB=1) empty during drain
+# [ERR][S10] t=6060ns exp=10 got=f (S-01) advance 24: count after 16 writes
+# [ERR][S10] t=6570ns exp=0 got=1 (S-02) offset 24 (MSB=1) full during fill
+# [ERR][S10] t=6580ns exp=10 got=f (S-01) offset 24 (MSB=1) count at fill end
+# [ERR][S10] t=6740ns exp=0 got=1 (S-02) offset 24 (MSB=1) empty during drain
+# [ERR][S10] t=6960ns exp=10 got=f (S-01) advance 31: count after 16 writes
+# [ERR][S10] t=7610ns exp=0 got=1 (S-02) offset 31 (MSB=1) full during fill
+# [ERR][S10] t=7620ns exp=10 got=f (S-01) offset 31 (MSB=1) count at fill end
+# [ERR][S10] t=7780ns exp=0 got=1 (S-02) offset 31 (MSB=1) empty during drain
+# INFO S10 checks=1383 errors=30
+# TEST S10 FAIL
+# INFO S11 checks=59 errors=0
+# TEST S11 PASS
+# [ERR][S12] t=8420ns exp=10 got=f (S-04) count after pattern batch
+# [ERR][S12] t=8580ns exp=0 got=1 (C-01) empty=0 before pattern pop 15
+# [ERR][S12] t=8760ns exp=10 got=f (S-04) count after pattern batch
+# [ERR][S12] t=8920ns exp=0 got=1 (C-01) empty=0 before pattern pop 15
+# INFO S12 checks=154 errors=4
+# TEST S12 FAIL
+# [ERR][S13] t=9230ns exp=0 got=1 (S-02) full=0 during write burst, cycle 15
+# [ERR][S13] t=9240ns exp=10 got=f (S-04) count after write burst
+# [ERR][S13] t=9240ns exp=0 got=1 (C-04) no overflow after write burst
+# [ERR][S13] t=9250ns exp=10 got=f (S-04) count during read burst, cycle 0
+# [ERR][S13] t=9260ns exp=f got=e (S-04) count during read burst, cycle 1
+# [ERR][S13] t=9270ns exp=e got=d (S-04) count during read burst, cycle 2
+# [ERR][S13] t=9280ns exp=d got=c (S-04) count during read burst, cycle 3
+# [ERR][S13] t=9290ns exp=c got=b (S-04) count during read burst, cycle 4
+# [ERR][S13] t=9300ns exp=b got=a (S-04) count during read burst, cycle 5
+# [ERR][S13] t=9310ns exp=a got=9 (S-04) count during read burst, cycle 6
+# [ERR][S13] t=9320ns exp=9 got=8 (S-04) count during read burst, cycle 7
+# [ERR][S13] t=9330ns exp=8 got=7 (S-04) count during read burst, cycle 8
+# [ERR][S13] t=9340ns exp=7 got=6 (S-04) count during read burst, cycle 9
+# [ERR][S13] t=9350ns exp=6 got=5 (S-04) count during read burst, cycle 10
+# [ERR][S13] t=9360ns exp=5 got=4 (S-04) count during read burst, cycle 11
+# [ERR][S13] t=9370ns exp=4 got=3 (S-04) count during read burst, cycle 12
+# [ERR][S13] t=9380ns exp=3 got=2 (S-04) count during read burst, cycle 13
+# [ERR][S13] t=9390ns exp=2 got=1 (S-04) count during read burst, cycle 14
+# [ERR][S13] t=9400ns exp=1 got=0 (S-04) count during read burst, cycle 15
+# [ERR][S13] t=9400ns exp=0 got=1 (C-01) empty=0 during read burst, cycle 15
+# [ERR][S13] t=9410ns exp=0 got=1 (C-04) no underflow after read burst
+# INFO S13 checks=166 errors=21
+# TEST S13 FAIL
+# INFO S14 checks=73 errors=0
+# TEST S14 PASS
+# [ERR][S15/S3] t=9950ns exp=0 got=1 (S-02) full=0 with DEPTH-1 stored
+# [ERR][S15/S3] t=9960ns exp=10 got=f (S-04) count after DEPTH writes
+# [ERR][S15/S3] t=9960ns exp=0 got=1 (C-04) no overflow on accepted writes
+# [ERR][S15/S4] t=10330ns exp=0 got=1 (C-01) empty=0 before pop 15
+# [ERR][S15/S4] t=10340ns exp=0 got=1 (C-04) no underflow on accepted reads
+# [ERR][S15/S5] t=10570ns exp=10 got=f (C-03) count unchanged after rejected write
+# [ERR][S15/S5] t=10620ns exp=10 got=f (C-03) count unchanged after 3 rejected writes
+# [ERR][S15/S5] t=10780ns exp=0 got=1 (C-01) empty=0 before pop 15
+# [ERR][S15/S9] t=11800ns exp=f got=e (S-03) count=DEPTH-1
+# [ERR][S15/S10] t=12170ns exp=0 got=1 (S-02) lap 0 full during fill
+# [ERR][S15/S10] t=12180ns exp=10 got=f (S-01) lap 0 count at fill end
+# [ERR][S15/S10] t=12340ns exp=0 got=1 (S-02) lap 0 empty during drain
+# [ERR][S15/S10] t=12510ns exp=0 got=1 (S-02) lap 1 full during fill
+# [ERR][S15/S10] t=12520ns exp=10 got=f (S-01) lap 1 count at fill end
+# [ERR][S15/S10] t=12680ns exp=0 got=1 (S-02) lap 1 empty during drain
+# [ERR][S15/S10] t=12850ns exp=0 got=1 (S-02) lap 2 full during fill
+# [ERR][S15/S10] t=12860ns exp=10 got=f (S-01) lap 2 count at fill end
+# [ERR][S15/S10] t=13020ns exp=0 got=1 (S-02) lap 2 empty during drain
+# [ERR][S15/S10] t=13270ns exp=0 got=1 (S-02) offset 1 (MSB=0) full during fill
+# [ERR][S15/S10] t=13280ns exp=10 got=f (S-01) offset 1 (MSB=0) count at fill end
+# [ERR][S15/S10] t=13440ns exp=0 got=1 (S-02) offset 1 (MSB=0) empty during drain
+# [ERR][S15/S10] t=13830ns exp=0 got=1 (S-02) offset 8 (MSB=0) full during fill
+# [ERR][S15/S10] t=13840ns exp=10 got=f (S-01) offset 8 (MSB=0) count at fill end
+# [ERR][S15/S10] t=14000ns exp=0 got=1 (S-02) offset 8 (MSB=0) empty during drain
+# [ERR][S15/S10] t=14530ns exp=0 got=1 (S-02) offset 15 (MSB=0) full during fill
+# [ERR][S15/S10] t=14540ns exp=10 got=f (S-01) offset 15 (MSB=0) count at fill end
+# [ERR][S15/S10] t=14700ns exp=0 got=1 (S-02) offset 15 (MSB=0) empty during drain
+# [ERR][S15/S10] t=14920ns exp=10 got=f (S-01) advance 17: count after 16 writes
+# [ERR][S15/S10] t=15290ns exp=0 got=1 (S-02) offset 17 (MSB=1) full during fill
+# [ERR][S15/S10] t=15300ns exp=10 got=f (S-01) offset 17 (MSB=1) count at fill end
+# [ERR][S15/S10] t=15460ns exp=0 got=1 (S-02) offset 17 (MSB=1) empty during drain
+# [ERR][S15/S10] t=15680ns exp=10 got=f (S-01) advance 24: count after 16 writes
+# [ERR][S15/S10] t=16190ns exp=0 got=1 (S-02) offset 24 (MSB=1) full during fill
+# [ERR][S15/S10] t=16200ns exp=10 got=f (S-01) offset 24 (MSB=1) count at fill end
+# [ERR][S15/S10] t=16360ns exp=0 got=1 (S-02) offset 24 (MSB=1) empty during drain
+# [ERR][S15/S10] t=16580ns exp=10 got=f (S-01) advance 31: count after 16 writes
+# [ERR][S15/S10] t=17230ns exp=0 got=1 (S-02) offset 31 (MSB=1) full during fill
+# [ERR][S15/S10] t=17240ns exp=10 got=f (S-01) offset 31 (MSB=1) count at fill end
+# [ERR][S15/S10] t=17400ns exp=0 got=1 (S-02) offset 31 (MSB=1) empty during drain
+# [ERR][S15/S12] t=18040ns exp=10 got=f (S-04) count after pattern batch
+# [ERR][S15/S12] t=18200ns exp=0 got=1 (C-01) empty=0 before pattern pop 15
+# [ERR][S15/S12] t=18380ns exp=10 got=f (S-04) count after pattern batch
+# [ERR][S15/S12] t=18540ns exp=0 got=1 (C-01) empty=0 before pattern pop 15
+# [ERR][S15/S13] t=18850ns exp=0 got=1 (S-02) full=0 during write burst, cycle 15
+# [ERR][S15/S13] t=18860ns exp=10 got=f (S-04) count after write burst
+# [ERR][S15/S13] t=18860ns exp=0 got=1 (C-04) no overflow after write burst
+# [ERR][S15/S13] t=18870ns exp=10 got=f (S-04) count during read burst, cycle 0
+# [ERR][S15/S13] t=18880ns exp=f got=e (S-04) count during read burst, cycle 1
+# [ERR][S15/S13] t=18890ns exp=e got=d (S-04) count during read burst, cycle 2
+# [ERR][S15/S13] t=18900ns exp=d got=c (S-04) count during read burst, cycle 3
+# [ERR][S15/S13] t=18910ns exp=c got=b (S-04) count during read burst, cycle 4
+# [ERR][S15/S13] t=18920ns exp=b got=a (S-04) count during read burst, cycle 5
+# [ERR][S15/S13] t=18930ns exp=a got=9 (S-04) count during read burst, cycle 6
+# [ERR][S15/S13] t=18940ns exp=9 got=8 (S-04) count during read burst, cycle 7
+# [ERR][S15/S13] t=18950ns exp=8 got=7 (S-04) count during read burst, cycle 8
+# [ERR][S15/S13] t=18960ns exp=7 got=6 (S-04) count during read burst, cycle 9
+# [ERR][S15/S13] t=18970ns exp=6 got=5 (S-04) count during read burst, cycle 10
+# [ERR][S15/S13] t=18980ns exp=5 got=4 (S-04) count during read burst, cycle 11
+# [ERR][S15/S13] t=18990ns exp=4 got=3 (S-04) count during read burst, cycle 12
+# [ERR][S15/S13] t=19000ns exp=3 got=2 (S-04) count during read burst, cycle 13
+# [ERR][S15/S13] t=19010ns exp=2 got=1 (S-04) count during read burst, cycle 14
+# [ERR][S15/S13] t=19020ns exp=1 got=0 (S-04) count during read burst, cycle 15
+# [ERR][S15/S13] t=19020ns exp=0 got=1 (C-01) empty=0 during read burst, cycle 15
+# [ERR][S15/S13] t=19030ns exp=0 got=1 (C-04) no underflow after read burst
+# INFO S15 checks=2249 errors=64
+# TEST S15 FAIL
+# [ERR][S16] t=19240ns exp=10 got=f (S-01) count=DEPTH at full
+# [ERR][S16] t=19250ns exp=10 got=f (S-04) count during drain, cycle 0
+# [ERR][S16] t=19260ns exp=f got=e (S-04) count during drain, cycle 1
+# [ERR][S16] t=19270ns exp=e got=d (S-04) count during drain, cycle 2
+# [ERR][S16] t=19280ns exp=d got=c (S-04) count during drain, cycle 3
+# [ERR][S16] t=19290ns exp=c got=b (S-04) count during drain, cycle 4
+# [ERR][S16] t=19300ns exp=b got=a (S-04) count during drain, cycle 5
+# [ERR][S16] t=19310ns exp=a got=9 (S-04) count during drain, cycle 6
+# [ERR][S16] t=19320ns exp=9 got=8 (S-04) count during drain, cycle 7
+# [ERR][S16] t=19330ns exp=8 got=7 (S-04) count during drain, cycle 8
+# [ERR][S16] t=19340ns exp=7 got=6 (S-04) count during drain, cycle 9
+# [ERR][S16] t=19350ns exp=6 got=5 (S-04) count during drain, cycle 10
+# [ERR][S16] t=19360ns exp=5 got=4 (S-04) count during drain, cycle 11
+# [ERR][S16] t=19370ns exp=4 got=3 (S-04) count during drain, cycle 12
+# [ERR][S16] t=19380ns exp=3 got=2 (S-04) count during drain, cycle 13
+# [ERR][S16] t=19390ns exp=2 got=1 (S-04) count during drain, cycle 14
+# [ERR][S16] t=19400ns exp=1 got=0 (S-04) count during drain, cycle 15
+# INFO S16 checks=150 errors=17
+# TEST S16 FAIL
+# INFO S17 checks=63 errors=0
+# TEST S17 PASS
+# TB FAIL (145 errors)
+# ** Note: $finish    : p1/tb/tb_sync_fifo.sv(674)
+#    Time: 20010 ns  Iteration: 1  Instance: /tb_sync_fifo
+# End time: 21:16:42 on Oct 17,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

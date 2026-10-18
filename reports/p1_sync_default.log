@@ -1,0 +1,65 @@
+Reading pref.tcl
+
+# 2025.2
+
+# ** Note: (vsim-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -c -work D:/Projects/HW/coherent-cache-dv/work/p1 -coverage tb_sync_fifo -do "run -all; coverage save -onexit /d/Projects/HW/coherent-cache-dv/work/p1/cov.ucdb; quit -f" 
+# Start time: 21:15:25 on Oct 17,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_sync_fifo(fast)
+# run -all
+# INFO tb_sync_fifo DEPTH=16 DATA_WIDTH=32
+# INFO S1 checks=8 errors=0
+# TEST S1 PASS
+# INFO S2 checks=14 errors=0
+# TEST S2 PASS
+# INFO S3 checks=23 errors=0
+# TEST S3 PASS
+# INFO S4 checks=70 errors=0
+# TEST S4 PASS
+# INFO S5 checks=85 errors=0
+# TEST S5 PASS
+# INFO S6 checks=27 errors=0
+# TEST S6 PASS
+# INFO S7 checks=190 errors=0
+# TEST S7 PASS
+# INFO S8 checks=14 errors=0
+# TEST S8 PASS
+# INFO S9 checks=59 errors=0
+# TEST S9 PASS
+# INFO S10 checks=1395 errors=0
+# TEST S10 PASS
+# INFO S11 checks=59 errors=0
+# TEST S11 PASS
+# INFO S12 checks=156 errors=0
+# TEST S12 PASS
+# INFO S13 checks=167 errors=0
+# TEST S13 PASS
+# INFO S14 checks=73 errors=0
+# TEST S14 PASS
+# INFO S15 checks=2267 errors=0
+# TEST S15 PASS
+# INFO S16 checks=150 errors=0
+# TEST S16 PASS
+# INFO S17 checks=63 errors=0
+# TEST S17 PASS
+# TB PASS
+# ** Note: $finish    : p1/tb/tb_sync_fifo.sv(674)
+#    Time: 20010 ns  Iteration: 1  Instance: /tb_sync_fifo
+# End time: 21:15:26 on Oct 17,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
