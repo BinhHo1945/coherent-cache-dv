@@ -32,7 +32,8 @@ P1 does not claim "CDC verified", only test- and design-argument-based evidence.
 | `DEPTH` | 16 | power of 2, >= 2 |
 | `ADDR_W` (derived) | `$clog2(DEPTH)` | do not override |
 
-An illegal `DEPTH` must cause an elaboration-time fatal error.
+- An illegal `DEPTH` must cause an elaboration-time fatal error.
+- Overriding ADDR_W, or an illegal DATA_WIDTH or DEPTH, is an elaboration-time fatal error.
 
 ## 4. Interface
 
@@ -63,11 +64,11 @@ An illegal `DEPTH` must cause an elaboration-time fatal error.
   it was sampled (registered output). Rejected read: same for `underflow`.
   Consecutive rejected attempts give consecutive pulse cycles.
 - C-05 After reset: `empty=1`, `full=0`, `overflow=0`, `underflow=0`, (sync) `count=0`.
-  The memory array is not cleared.
+  The memory array is not cleared. From the first rising edge that samples the reset low, outputs take their reset values; before that edge they still show the previous state.
 - C-06 `rd_data` is don't-care while `empty=1`. Testbenches must not check it then.
 - C-07 Data order is FIFO. No element is lost or duplicated.
 - C-08 `wr_en`/`rd_en` sampled while the relevant reset is asserted have no effect and
-  produce no `overflow`/`underflow` pulse.
+  produce no `overflow`/`underflow` pulse. No memory write occurs while reset is asserted.
 
 ## 6. Sync FIFO (`sync_fifo`)
 
@@ -121,6 +122,12 @@ An illegal `DEPTH` must cause an elaboration-time fatal error.
 - Passing defines: `./sim/run.sh p1 <top> +define+BUG_FULL_OFFBYONE`.
 - Files: `p1/rtl/sync_fifo.sv`, `p1/rtl/async_fifo.sv`,
   `p1/tb/tb_sync_fifo.sv`, `p1/tb/tb_async_fifo.sv`.
+- Bug definitions (sync_fifo):
+  - BUG_FULL_OFFBYONE: `full` asserts at DEPTH-1 stored entries instead of DEPTH.
+  - BUG_RDWR_FULL: a write is accepted while full if a read occurs in the same cycle,
+    violating S-03.
+  Remaining reserved names (BUG_WRAP_MSB, BUG_WRITE_WHEN_FULL, BUG_GRAY_BINARY)
+  are defined in P2 or in the async FIFO stage.
 
 ## 9. Reuse in later projects
 
