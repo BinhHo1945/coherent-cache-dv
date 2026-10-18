@@ -34,3 +34,5 @@ __pycache__/
 .DS_Store
 Thumbs.db
 reports/p1_run.log
+
+reports/p1_tb_*_run.log
