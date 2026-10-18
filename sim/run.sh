@@ -26,4 +26,4 @@ vlib "$WORKDIR"
 vlog -sv -work "$WORKDIR" +cover=bcesf "$@" $FILES
 vsim -c -work "$WORKDIR" -coverage ${VSIM_ARGS:-} "$TOP" \
      -do "run -all; coverage save -onexit $WORKDIR/cov.ucdb; quit -f" \
-     | tee "$ROOT/reports/${PROJ}_run.log"
+     | tee "$ROOT/reports/${PROJ}_${TOP}_run.log"
