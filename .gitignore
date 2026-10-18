@@ -32,4 +32,5 @@ __pycache__/
 # Editor / OS
 .vscode/
 .DS_Store
-Thumbs.dbreports/p1_run.log
+Thumbs.db
+reports/p1_run.log
