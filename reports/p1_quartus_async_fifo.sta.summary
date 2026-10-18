@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'rclk'
+Slack : 7.061
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'wclk'
+Slack : 7.169
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'wclk'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'rclk'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'wclk'
+Slack : 3.854
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'rclk'
+Slack : 3.860
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'wclk'
+Slack : 7.091
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'rclk'
+Slack : 7.152
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'wclk'
+Slack : 0.323
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'rclk'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'wclk'
+Slack : 3.797
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'rclk'
+Slack : 3.809
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'rclk'
+Slack : 8.219
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'wclk'
+Slack : 8.415
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'rclk'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'wclk'
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'wclk'
+Slack : 3.796
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'rclk'
+Slack : 3.851
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'rclk'
+Slack : 8.392
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'wclk'
+Slack : 8.518
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'rclk'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'wclk'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'wclk'
+Slack : 3.788
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'rclk'
+Slack : 3.839
+TNS   : 0.000
+
+------------------------------------------------------------

@@ -36,3 +36,6 @@ Thumbs.db
 reports/p1_run.log
 
 reports/p1_tb_*_run.log
+
+# Quartus per-project extras (P1)
+p1/quartus/**/c5_pin_model_dump.txt

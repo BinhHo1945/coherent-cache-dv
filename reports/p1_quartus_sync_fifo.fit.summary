@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Oct 18 14:07:04 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : sync_fifo
+Top-level Entity Name : sync_fifo
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 73 / 32,070 ( < 1 % )
+Total registers : 53
+Total pins : 1 / 457 ( < 1 % )
+Total virtual pins : 76
+Total block memory bits : 512 / 4,065,280 ( < 1 % )
+Total RAM Blocks : 1 / 397 ( < 1 % )
+Total DSP Blocks : 0 / 87 ( 0 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0 / 6 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )
