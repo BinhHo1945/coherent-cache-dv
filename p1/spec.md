@@ -126,8 +126,12 @@ P1 does not claim "CDC verified", only test- and design-argument-based evidence.
   - BUG_FULL_OFFBYONE: `full` asserts at DEPTH-1 stored entries instead of DEPTH.
   - BUG_RDWR_FULL: a write is accepted while full if a read occurs in the same cycle,
     violating S-03.
-  Remaining reserved names (BUG_WRAP_MSB, BUG_WRITE_WHEN_FULL, BUG_GRAY_BINARY)
-  are defined in P2 or in the async FIFO stage.
+- Bug definitions (async_fifo):
+  - BUG_WRAP_MSB: `full` compares gray pointers with only the MSB inverted
+    (binary rule), ignoring the second-MSB inversion that gray wrap needs.
+  - BUG_GRAY_BINARY: binary pointers are registered as wptr_gray/rptr_gray and
+    cross domains; the full comparison is also affected as a side effect.
+  - BUG_WRITE_WHEN_FULL: a write is accepted while full, overwriting unread data.
 
 ## 9. Reuse in later projects
 
