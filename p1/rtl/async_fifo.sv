@@ -21,6 +21,10 @@ module async_fifo #(
 );
 
   // Sec. 3: illegal parameters are an elaboration-time fatal error.
+  // Quartus Prime Standard/Lite does not accept $fatal in a generate block, so the
+  // checks are hidden from Quartus (QUARTUS_SYNTH is set in the .qsf). Simulation
+  // and lint still enforce them; the Quartus projects pin legal parameter values.
+`ifndef QUARTUS_SYNTH
   if (DEPTH < 2 || (DEPTH & (DEPTH - 1)) != 0) begin : g_bad_depth
     $fatal(1, "async_fifo: DEPTH=%0d must be a power of 2 and >= 2", DEPTH);
   end
@@ -30,6 +34,7 @@ module async_fifo #(
   if (ADDR_W != $clog2(DEPTH)) begin : g_bad_addr_w
     $fatal(1, "async_fifo: ADDR_W must not be overridden");
   end
+`endif
 
   // ---------------------------------------------------------------------------
   // Write domain (wclk): binary pointer and gray pointer, ADDR_W+1 bits each
