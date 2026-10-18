@@ -1,0 +1,60 @@
+Reading pref.tcl
+
+# 2025.2
+
+# ** Note: (vsim-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# vsim -c -work D:/Projects/HW/coherent-cache-dv/work/p1 -coverage tb_async_fifo -do "run -all; coverage save -onexit /d/Projects/HW/coherent-cache-dv/work/p1/cov.ucdb; quit -f" 
+# Start time: 12:47:56 on Oct 18,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-220) 'C:/altera_lite/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.tb_async_fifo(fast)
+# run -all
+# INFO tb_async_fifo DEPTH=4 DATA_WIDTH=32
+# INFO A1 checks=16 errors=0
+# TEST A1 PASS
+# INFO A2 empty fell at rclk edge 3 after the write
+# INFO A2 checks=7 errors=0
+# TEST A2 PASS
+# INFO A3 checks=19 errors=0
+# TEST A3 PASS
+# INFO A4 full fell at wclk edge 3 after the first pop
+# INFO A4 checks=12 errors=0
+# TEST A4 PASS
+# INFO A5 checks=5997 errors=0
+# TEST A5 PASS
+# INFO A6 checks=6004 errors=0
+# TEST A6 PASS
+# INFO A7 checks=4601 errors=0
+# TEST A7 PASS
+# INFO A8 checks=27 errors=0
+# TEST A8 PASS
+# INFO A9 checks=22633 errors=0
+# TEST A9 PASS
+# INFO A10 checks=886 errors=0
+# TEST A10 PASS
+# INFO A11 checks=35 errors=0
+# TEST A11 PASS
+# INFO A12/A2 empty fell at rclk edge 3 after the write
+# INFO A12/A4 full fell at wclk edge 3 after the first pop
+# INFO A12 checks=6902 errors=0
+# TEST A12 PASS
+# TB PASS
+# ** Note: $finish    : p1/tb/tb_async_fifo.sv(783)
+#    Time: 215641600 ps  Iteration: 1  Instance: /tb_async_fifo
+# End time: 12:47:58 on Oct 18,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
